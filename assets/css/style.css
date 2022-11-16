@@ -1,10 +1,34 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Linux Libertine','Georgia','Times',serif;
 }
 ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+
+a { color: #3366cc;
+    text-decoration: none;
+    font-size: 0.875em;
+    font-family: sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Linux Libertine','Georgia','Times',serif;
+    line-height: 1.3;
+    font-weight: normal;
+    margin:0;
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
+    overflow: hidden;
+}
+
+h3{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 1.8em
+}
+
 .bar {
     background-color: #f9f9fb;
     padding:15px;
@@ -22,6 +46,19 @@ a { color:blue; text-decoration: none;}
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.list_nav li{
+    padding: 2px 0;
+}
+
+.wikitable tr th{
+    background-color:  #A9A9A9;
+}
+
+.wikitable td{
+    border: 1px solid gray;
+}
+
 .footer {
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
@@ -30,9 +67,29 @@ a { color:blue; text-decoration: none;}
     border-left: solid 1px #cdcdcd;
     padding-left: 15px;
 }
+
+.anchors_logo{
+    margin-top: 10px;
+    margin-left: 0;
+
+}
 .sidebar {
     border-right: solid 1px #cdcdcd;
 }
 figure {
     text-align: center;
+}
+
+.footer-container{
+    padding: 50px 0;
+    margin-top: 10px;
+}
+
+footer ul{
+    margin: 0 15px;
+    margin-bottom: 10px;
+}
+
+#footer-places li{
+    padding: 5px;
 }
