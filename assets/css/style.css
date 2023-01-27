@@ -1,14 +1,26 @@
+*{background-color: rgb(204, 204, 204);}
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+a { color:rgb(9, 51, 80); text-decoration: none;}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+.cabecalho-texto h1{
+    display: flex;
+    align-items: center;
+    margin-left: 400px;
+}
 .bar {
-    background-color: #f9f9fb;
+    background-color: rgb(204, 204, 204);
     padding:15px;
-    border-top: solid 1px #cdcdcd;
+    border-top: solid 1px #000000;
     border-bottom: solid 1px #cdcdcd;
 }
 .content {
@@ -22,9 +34,14 @@ a { color:blue; text-decoration: none;}
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.footer {
+.video{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer {
     min-height: 100px;
-    border-top: solid 1px #cdcdcd;
+    border-top: solid 10px #cdcdcd;
 }
 .anchors {
     border-left: solid 1px #cdcdcd;
