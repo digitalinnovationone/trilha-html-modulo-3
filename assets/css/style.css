@@ -2,14 +2,20 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
-ul { list-style: none; padding-left: 5px; }
+
+ul { list-style:  none; padding-left: 5px; position: static; }
 a { color:blue; text-decoration: none;}
+
+
 .bar {
     background-color: #f9f9fb;
     padding:15px;
     border-top: solid 1px #cdcdcd;
     border-bottom: solid 1px #cdcdcd;
+    
+    
 }
 .content {
     max-width: 1440px;
@@ -21,18 +27,58 @@ a { color:blue; text-decoration: none;}
     grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
     padding-left: 1rem;
     padding-right: 1rem;
+    
+    
+    
+}
+.main a {
+    color: black;
 }
 .footer {
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
+    text-align: center;
+    padding-top: 20px;
+    
 }
 .anchors {
     border-left: solid 1px #cdcdcd;
     padding-left: 15px;
+    text-align: center;
+    
+     
+    
 }
 .sidebar {
     border-right: solid 1px #cdcdcd;
+   
+    
 }
-figure {
+.logo {
+    text-align: left;
+    
+}
+table, td {
+    border: 1px solid  black;
+    border-collapse: collapse;
     text-align: center;
+  }
+th{
+    border: 1px solid gray;
+}
+#menu { 
+    position: fixed;     
+}
+#info {
+background-color: aqua;
+border-radius: 2px;
+}
+#h6 {
+    text-align: left;
+}
+#h5 {
+    text-align: right 20px;
+    font-size: small;
+    height: 10px;
+    
 }
