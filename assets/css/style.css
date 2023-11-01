@@ -1,10 +1,66 @@
 body, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+a { color:blue; text-decoration: none; background: none;}
+img{border: 0; vertical-align: middle;}
+
+.vector-header-conteiner {
+    padding-left: 2.75em;
+    padding-right: 2.75em;
+    min-width: 22.25em;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+.vector-header-conteiner .mw-header {
+    width: 100%;
+    min-height: 3.125em;
+}
+
+.mw-header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.vector-header-start {
+    display: flex;
+    align-items: center;
+}
+
+.mw-logo{
+    display: flex;
+    align-items: center;
+    height: center;
+    min-width: 13.875em;
+}
+
+.mw-logo-icon {
+    float: left;
+    margin-right: 10px;
+    width: 3.125em;
+    height: 3.125em;
+}
+
+.mw-logo-conteiner{
+    float: left;
+}
+
+.mw-logo-wordmark{
+    display:block;
+    margin: 0 auto;
+}
+
+.mw-logo-tagline {
+    display: block;
+    margin: 5px auto 0;
+}
+
 .bar {
     background-color: #f9f9fb;
     padding:15px;
@@ -33,6 +89,27 @@ a { color:blue; text-decoration: none;}
 .sidebar {
     border-right: solid 1px #cdcdcd;
 }
+
+.list-item {
+    display: block;
+    position: relative;
+    list-style-type: none;
+    padding-left: 8px;
+    margin: 0;
+}
+
+.wikitable {
+    background-color: #f8f9fa;
+    color: #202122;
+    border: 1px solid #a2a9b1;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border:1px solid black;
+  }
+
+
 figure {
     text-align: center;
 }
