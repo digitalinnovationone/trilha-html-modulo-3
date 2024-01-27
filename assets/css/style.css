@@ -12,12 +12,12 @@ a { color:blue; text-decoration: none;}
     border-bottom: solid 1px #cdcdcd;
 }
 .content {
-    max-width: 1440px;
+    max-width: 1240px;
     margin: auto;
     grid-gap: 3rem;
     display: grid;
     gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
+    grid-template-areas: "sidebar main table";
     grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
     padding-left: 1rem;
     padding-right: 1rem;
@@ -26,13 +26,56 @@ a { color:blue; text-decoration: none;}
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
 }
-.anchors {
+.table-serie {
     border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
 }
 .sidebar {
     border-right: solid 1px #cdcdcd;
 }
 figure {
     text-align: center;
+}
+
+.table-footer{
+    margin: auto;
+}
+
+table{
+    border-spacing: 10px;
+    border: 1px solid #ddd;
+}
+
+input{
+    margin-left: 200px;
+    margin-bottom: 10px;
+}
+
+.row-title{
+    background-color: #D4F2CE;
+}
+
+.series-table tr:nth-child(even){
+    background-color: #EAECF0;
+}
+
+.series-table{
+    border-collapse: collapse;
+
+}
+
+.series-table th,td {
+    padding: 4px;
+    text-align: center;
+}
+
+thead{
+    background-color: #EAECF0;
+}
+
+.conta{
+    margin-left: 1100px;
+}
+
+.conta a {
+    padding-right: 40px;
 }
