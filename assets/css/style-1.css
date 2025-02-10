@@ -1,0 +1,126 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    border-bottom: solid 1px #cdcdcd;
+}
+
+.bar {
+    background-color: #f9f9fb;
+    padding: 15px;
+    border-top: solid 1px #cdcdcd;
+    border-bottom: solid 1px #cdcdcd;
+}
+
+.content {
+    max-width: 1440px;
+    margin: auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
+    padding: 1rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    border-right: solid 1px #cdcdcd;
+    padding-right: 15px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    padding-left: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main section {
+    margin-bottom: 2rem;
+}
+
+.main h1 {
+    margin-top: 0;
+}
+
+.anchors {
+    grid-area: anchors;
+    border-left: solid 2px #cdcdcd;
+    padding-left: 20px;
+}
+
+.anchors h2 {
+    margin-top: 0;
+}
+
+.anchors ul {
+    padding-left: 0;
+}
+
+.anchors li {
+    margin-bottom: 10px;
+}
+
+.footer {
+    min-height: 100px;
+    border-top: solid 1px #cdcdcd;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    margin-top: 2rem;
+}
+
+/* Estilos para responsividade */
+@media (max-width: 768px) {
+    .content {
+        grid-template-areas: "sidebar" "main" "anchors";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar, .anchors {
+        border: none;
+        padding: 0;
+    }
+
+    .sidebar {
+        border-bottom: solid 1px #cdcdcd;
+        margin-bottom: 1rem;
+    }
+
+    .anchors {
+        border-top: solid 1px #cdcdcd;
+        margin-top: 1rem;
+    }
+}
