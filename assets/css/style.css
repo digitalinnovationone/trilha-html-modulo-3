@@ -29,10 +29,92 @@ a { color:blue; text-decoration: none;}
 .anchors {
     border-left: solid 1px #cdcdcd;
     padding-left: 15px;
+    position: sticky;
+    top: 0;
 }
 .sidebar {
     border-right: solid 1px #cdcdcd;
 }
 figure {
     text-align: center;
+}
+
+
+/* Estilos para a div class="infobox-textual" */
+.infobox-textual {
+    float: right; 
+    width: 250px; 
+    margin: 0 0 1em 1em; 
+    padding: 0.5em; 
+    border: 1px solid #aaa; 
+    background-color: #f9f9f9; 
+    font-size: 0.9em; 
+    line-height: 1.4; 
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
+}
+
+.infobox-textual h2 {
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.2em;
+    border-bottom: 1px solid #ccc;
+}
+
+.infobox-textual figure {
+    margin: 0; 
+    padding: 0;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.infobox-textual figure img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.infobox-textual figure figcaption {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 0.2em;
+}
+
+.infobox-textual dl {
+    margin: 0;
+    padding: 0;
+}
+
+.infobox-textual dt {
+    font-weight: bold;
+    margin-top: 0.5em;
+    padding-right: 0.5em;
+    vertical-align: top;
+    float: left; 
+    width: 35%; 
+    clear: left; 
+}
+
+.infobox-textual dd {
+    margin-left: 0;
+    padding-left: 40%; 
+    margin-top: 0.5em;
+    min-height: 1.5em; 
+}
+
+.infobox-textual dd ul {
+    margin: 0;
+    padding-left: 1.2em; 
+}
+
+.infobox-textual dd ul li {
+    margin-bottom: 0.2em;
+}
+
+.main::after {
+    content: "";
+    display: table;
+    clear: both;
 }
