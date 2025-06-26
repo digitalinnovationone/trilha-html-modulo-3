@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        Cabeçalho da página:
+        - Define charset, viewport para responsividade.
+        - Inclui folhas de estilo locais e externas (Font Awesome).
+        - Define o título da página.
+        - Inclui tags para acessibilidade.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikipédiA</title>
+    <link rel="shortcut icon" href="assets/icone-site2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style/newPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Página acessível sobre Naruto na Wikipédia, com navegação por teclado, leitores de tela e estrutura semântica.">
+</head>
+<body>
+    <!--
+        Container principal do site, usa display:grid para layout.
+        Envolve todas as seções principais.
+    -->
+    <div id="container"> <!--ESTRUTURA DO SITE EM DISPLAY:GRID --->
+
+        <!--
+            Cabeçalho do site:
+            - Letreiro/logo.
+            - Barra de pesquisa.
+            - Menu de navegação (cadastro, login, donativos).
+        -->
+        <header class="cabecalho" role="banner" aria-label="Cabeçalho">
+            <img src="../assets/letreiro-new.png" alt="Logo da Wikipédia"> <!--LETREIRO WIKIPEDIA-->
+
+            <!-- Barra de pesquisa acessível -->
+            <nav class="barra-pesquisa" aria-label="Pesquisar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <label for="pesquisa-wikipedia" class="sr-only">Pesquisar na Wikipédia</label>
+                <input id="pesquisa-wikipedia" type="text" placeholder="Wikipédia" aria-label="Pesquisar na Wikipédia">
+            </nav>
+
+            <!-- Menu do cabeçalho acessível -->
+            <nav class="menu-cabecalho" aria-label="Menu do usuário">
+                <ul>
+                    <li>
+                        <a href="" aria-label="Cadastro">
+                            <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" aria-label="Login">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" aria-label="Donativos">
+                            <i class="fas fa-hand-holding-dollar" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--
+            Barra lateral:
+            - Ícone do site.
+            - Menu de navegação lateral com sessões e submenus.
+        -->
+        <aside class="lateral" role="complementary" aria-label="Menu lateral">
+            <div class="icone-lateral">
+                <img src="../assets/icone-site2.png" alt="Ícone do site Wikipédia">
+            </div>
+
+            <!-- Menu lateral acessível -->
+            <nav class="menu-lateral" aria-label="Sessões do conteúdo">
+                <h3 id="sessao-conteudo">Sessões do Conteúdo</h3>
+                <ul aria-labelledby="sessao-conteudo">
+                    <li class="Btn-menu">
+                        <a href="" aria-label="Início">
+                            <img src="../assets/icones-pagina/icone-inicio.svg" alt="" aria-hidden="true">
+                            <span class="texto-menu">Início</span>
+                            <img title="Btn-skip" src="../assets/icones-pagina/icone-seguir.svg" alt="" aria-hidden="true">
+                        </a>
+                    </li>
+                    <!-- Submenu acessível -->
+                    <li class="Btn-menu item-com-submenu">
+                        <a href="#" aria-haspopup="true" aria-expanded="false" aria-controls="submenu-enredo">
+                            <img src="../assets/icones-pagina/icone-enredo.svg" alt="" aria-hidden="true">
+                            <span class="texto-menu">Enredo</span>
+                            <img title="Btn-skip" class="seta-dropdown" src="../assets/icones-pagina/icone-seguir.svg" alt="" aria-hidden="true">
+                        </a>
+                        <ul class="submenu-lateral" id="submenu-enredo" aria-label="Submenu Enredo">
+                            <li class="Btn-menu">
+                                <a href="" aria-label="Parte I">
+                                    <img src="../assets/icones-pagina/icone-pt1.svg" alt="" aria-hidden="true">
+                                    <span class="texto-menu">Parte I</span>
+                                    <img title="Btn-skip" src="../assets/icones-pagina/icone-seguir.svg" alt="" aria-hidden="true">
+                                </a>
+                            </li>
+                            <li class="Btn-menu">
+                                <a href="" aria-label="Parte II">
+                                    <img src="../assets/icones-pagina/icone-pt2.svg" alt="" aria-hidden="true">
+                                    <span class="texto-menu">Parte II</span>
+                                    <img title="Btn-skip" src="../assets/icones-pagina/icone-seguir.svg" alt="" aria-hidden="true">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="Btn-menu">
+                        <a href="" aria-label="Elementos da História">
+                            <img src="../assets/icones-pagina/icone-elementos-historia.svg" alt="" aria-hidden="true">
+                            <span class="texto-menu">Elementos da História</span>
+                            <img title="Btn-skip" src="../assets/icones-pagina/icone-seguir.svg" alt="" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li class="Btn-menu">
+                        <a href="" aria-label="Personagens">
+                            <img src="../assets/icones-pagina/icone-personagens.svg" alt="" aria-hidden="true">
+                            <span class="texto-menu">Personagens</span>
+                            <img title="Btn-skip" src="../assets/icones-pagina/icone-seguir.svg" alt="" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li class="Btn-menu">
+                        <a href="" aria-label="Produção">
+                            <img src="../assets/icones-pagina/icone-producao.svg" alt="" aria-hidden="true">
+                            <span class="texto-menu">Produção</span>
+                            <img title="Btn-skip" src="../assets/icones-pagina/icone-seguir.svg" alt="" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="Btn-mais" aria-label="Mais informações">
+                            <span class="informacoes-mais">+</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!--
+            Conteúdo principal:
+            - Títulos, temas, textos e infobox.
+            - Dividido em várias seções temáticas.
+        -->
+        <main class="box-principal" role="main" aria-label="Conteúdo principal">
+
+            <!--
+                Cabeçalho do conteúdo principal:
+                - Título do tema pesquisado.
+                - Gêneros do tema.
+                - Botões de cadeado.
+            -->
+            <header class="box-cabecalho-tema" aria-label="Cabeçalho do tema">
+                <div class="box-itens-cabecalho-main">
+                    <div class="titulo-cabecalho-main">
+                        <h1>Naruto 
+                            <span lang="ja">(ナルト)</span>
+                        </h1>
+                        <ul>
+                            <li>
+                                <small>
+                                    <i>Aventura</i>
+                                </small>
+                            </li>
+                            <li>
+                                <small>
+                                    <i>Comédia Dramática</i>
+                                </small>
+                            </li>
+                            <li>
+                                <small>
+                                    <i>Fantasia</i>
+                                </small>
+                            </li>
+                            <li>
+                                <small>
+                                    <i>Anime</i>
+                                </small>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Btn-cabecalho-main">
+                        <a href="" class="cadeado-aberto" aria-label="Cadeado aberto">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </a>
+                        <a href="" class="cadeado-fechado" aria-label="Cadeado fechado">
+                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+
+            <!--
+                Seção principal de conteúdo:
+                - Várias subseções: início, enredo, personagens, produção, etc.
+            -->
+            <section class="conteudo-main">
+
+                <!-- Seção: Início -->
+                <div class="titulo-temas">
+                    <h2>
+                        <span>Início</span>
+                    </h2>
+                </div>
+                <section class="conteudo1-main">
+                    <!-- Infobox à direita com imagem e detalhes -->
+                    <div class="box-infobox" aria-label="Informações resumidas de Naruto">
+                        <div class="infobox-main-direita">
+                            <div class="boxImg-infobox">
+                                <img src="../assets/naruto2.png" alt="Imagem de Naruto">
+                            </div>
+                            <div class="detalhes-infobox">
+                                <h2>
+                                    <span>
+                                        Naruto (ナルト)
+                                    </span> 
+                                </h2>
+                                <h3>
+                                    <span>
+                                        Detalhes
+                                    </span>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <a href="" aria-label="Status: Finalizado">
+                                            <img title="marcador-kunai" src="../assets/icones-pagina/icone-kunai.svg" alt="" aria-hidden="true"> Status: Finalizado
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" aria-label="Temporadas: 31">
+                                            <img title="marcador-kunai" src="../assets/icones-pagina/icone-kunai.svg" alt="" aria-hidden="true"> Temporadas: 31
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" aria-label="Episódios: 720">
+                                            <img title="marcador-kunai" src="../assets/icones-pagina/icone-kunai.svg" alt="" aria-hidden="true">
+                                            Episódios: 720
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" aria-label="Período: 2002-2017">
+                                            <img title="marcador-kunai" src="../assets/icones-pagina/icone-kunai.svg" alt="" aria-hidden="true">
+                                            Periodo: 2002-2017
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Menu de abas Manga/Anime acessível -->
+                            <div class="menu-infobox" aria-label="Menu de abas Manga e Anime">
+                                <div class="abas-menu" role="tablist" aria-label="Abas Manga e Anime">
+                                    <div class="aba aba-ativa" data-aba="manga" role="tab" aria-selected="true" aria-controls="manga">
+                                        <h3>Manga</h3>
+                                    </div>
+                                    <div class="aba" data-aba="anime" role="tab" aria-selected="false" aria-controls="anime">
+                                        <h3>Anime</h3>
+                                    </div>
+                                </div>
+                                <div class="box-menus">
+                                    <!-- Menu Manga -->
+                                    <div id="manga" class="menu-aba-conteudo conteudo-ativo" role="tabpanel" aria-labelledby="manga">
+                                        <ul>
+                                            <li>
+                                                <strong>Escrito por:</strong> Masashi Kishimoto
+                                            </li>
+                                            <li>
+                                                <strong>Ilustrado por:</strong> Masashi Kishimoto
+                                            </li>
+                                            <li>
+                                                <strong>Editoração:</strong> Shueisha
+                                            </li>
+                                            <li>
+                                                <strong>Editoração lusófana:</strong> <sup>BR</sup>Panini Comics - Planet Manga <br>
+                                                <sup>PT</sup> Devir Manga
+                                            </li>
+                                            <li>
+                                                <strong>Revistas: </strong> Weekly 
+                                            </li>
+                                            <li>
+                                                <strong>Impressão:</strong> Jump Comics
+                                            </li>
+                                            <li>
+                                                <strong>Demografia</strong> Shonen Shōnen Jump
+                                            </li>
+                                            <li>
+                                                <strong>Período de publicação: </strong> 21 de setembro de 1999 - 10 de novembro de 2014
+                                            </li>
+                                            <li>
+                                                <strong>Volumes:</strong> 72
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Menu Anime -->
+                                    <div id="anime" class="menu-aba-conteudo" role="tabpanel" aria-labelledby="anime">
+                                        <ul>
+                                            <li>
+                                                <strong>Direção:</strong> Hayato Date
+                                            </li>
+                                            <li>
+                                                <strong>Roteiro:</strong> Katsuyuki Sumisawa, Junki Takegami, Masa'aki Kumagai, Yasuaki Kurotsu, Satoru Nishizono, Yasuyuki Suzuki
+                                            </li>
+                                            <li>
+                                                <strong>Música:</strong> Musashi Project, Toshiro Masuda, Yasuharu Takanashi
+                                            </li>
+                                            <li>
+                                                <strong>Estúdio de animação:</strong> Pierrot
+                                            </li>
+                                            <li>
+                                                <strong>Distribuição/Licenciamento:</strong> <sup>BR</sup> Televix Entertainment <sup>[2]</sup> <sup>PT</sup>Viz Media
+                                            </li>
+                                            <li>
+                                                <strong>Emissora original:</strong> TXN (TV Tokyo)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Texto principal à esquerda -->
+                    <div class="conteudo1-esquerda">
+                        <p class="primeiroP">
+                            <!-- Texto de introdução sobre Naruto -->
+                            Naruto (ナルト) é uma série de mangá escrita e ilustrada por Masashi Kishimoto, que conta a história de Naruto Uzumaki, um jovem ninja que constantemente procura por reconhecimento e sonha em se tornar Hokage, o ninja líder de sua vila. A história é dividida em duas partes, a primeira parte se passa nos anos da pré-adolescência de Naruto, e a segunda parte se passa em sua adolescência. A série é baseada em dois mangás one-shots de Kishimoto: Karakuri (1995), e que por causa dele Kishimoto ganhou uma menção honrosa no prêmio Hop Step da Shueisha no ano seguinte, e Naruto (1997). A editora Panini Comics licenciou e publicou o mangá em três versões no Brasil, e em Portugal é a editora Devir Manga quem licencia e publica o mangá. A história de Naruto continua com o seu filho, Boruto Uzumaki em Boruto: Naruto Next Generations.
+                        </p> <br>
+                        <p>
+                            <!-- Continuação do texto -->
+                            Os capítulos de Naruto foram publicados na revista Weekly Shōnen Jump de 1999 a 2014, com estes capítulos compilados e publicados em 72 volumes tankōbon pela editora Shueisha. O mangá foi adaptado para uma série de anime produzida pelo Studio Pierrot e Aniplex, que teve os seus 220 episódios transmitidos pela TV Tokyo no Japão de 2002 a 2007; a adaptação brasileira da série foi exibida na Cartoon Network e no SBT, e atualmente é exibido nos serviços de streaming Crunchyroll, Netflix e Claro Vídeo. Já a adaptação portuguesa da série foi exibida na SIC Radical, SIC, SIC K e no Animax Portugal. Naruto Shippuden, a sequência da série original, estreou no Japão em 2007 e terminou em 2017, após 500 episódios. A adaptação brasileira foi exibida na PlayTV de 2015 a 2017, na Loading entre 2020 e 2021, e atualmente é exibida nos serviços de streaming Crunchyroll, Netflix e Claro Vídeo. Além da série de anime, o Studio Pierrot desenvolveu onze filmes e vários OVAs. No Brasil, alguns filmes foram licenciados e exibidos dublados no país pela Viz Media. Outros produtos relacionados a Naruto como light novels, jogos eletrônicos, e cartas colecionáveis foram desenvolvidos por várias empresas.
+                        </p> <br>
+                        <p>
+                            <!-- Continuação do texto -->
+                            A partir de 2017, Naruto se tornou a terceira série de mangá mais vendida na história, vendendo mais de 220 milhões de cópias em todo o mundo, onde foi publicado em 35 países fora do Japão. Os críticos elogiaram o enredo, desenvolvimento de personagens, e as cenas de luta do mangá. Os críticos também observaram que o mangá, que tem uma história coming-of-age, faz uso de referências culturais da mitologia japonesa e do confucionismo.
+                        </p>
+                    </div>
+                </section>
+                <!-- Seção: Enredo Parte I -->
+                <section class="conteudo2-main">
+                    <div class="titulo-temas">
+                        <h2><span>Enredo</span></h2>
+                        <h3>Parte I</h3>
+                    </div>
+                    <img src="../assets/naruto-classico.png" alt="Naruto clássico">
+                    <p>
+                        <!-- Texto sobre o enredo Parte I -->
+                        A história principal se foca em Naruto e seu desenvolvimento quanto ninja, junto com os seus amigos. Também se centra nas interações entre estes e a influência do ambiente em suas personalidades. Conforme transcorre a série, Naruto se relaciona com Sasuke Uchiha e Sakura Haruno, com quem forma o “Time 7”, juntamente com o sensei Kakashi Hatake. Cabe mencionar que Naruto confia muito neles assim como em outros personagens que irá conhecendo mais adiante. Enquanto eles aprendem novas habilidades e conhecem novas pessoas e lugares em suas missões, Naruto luta por seu sonho de se tornar o líder máximo de sua aldeia (Hokage) e ser reconhecido como alguém importante. No início, a série se enfoca nos integrantes do Time 7, Naruto, Sasuke e Sakura. Pouco depois, Orochimaru (um dos vilões mais procurados) ataca a Aldeia Oculta da Folha, assassinando o Terceiro Hokage em um ato de vingança pessoal. Isso acaba desencadeando que Jiraiya, um dos três ninjas legendários (Sannins), inicie a busca da sua antiga companheira de equipe Tsunade para designá-la como a Quinta Hokage. Durante a sua busca é revelado que Orochimaru quer encontrar Sasuke (a quem conhece por suas técnicas de dōjutsu) para oferecer-lhe o poder que tanto deseja para matar seu irmão Itachi Uchiha, responsável pelo assassinato de todo seu clã. Sasuke aceita a proposta de Orochimaru e vai treinar com ele, e por isso traindo a sua aldeia. Enquanto isso, Naruto decide fazer algo a respeito, e então resolve deixar a aldeia junto com Jiraiya durante dois anos e meio com o objetivo de treinar e preparar-se para a próxima vez que encontrar Sasuke, a quem tentará salvar.
+                    </p>
+                </section>
+                <!-- Seção: Enredo Parte II -->
+                <section class="conteudo3-main">
+                    <div class="titulo-temas">
+                        <h3>Parte II (Naruto Shippuden)</h3>
+                    </div>
+                    <img src="../assets/naruto-shippuden.png" alt="Naruto Shippuden">
+                    <p>
+                        <!-- Texto sobre o enredo Parte II -->
+                        Ao concluir o período de treinamento, Naruto regressa a aldeia justo quando uma misteriosa organização denominada Akatsuki está tentando capturar as nove poderosas bestas Bijuus, incluindo a “Raposa de Nove Caudas” que permanece selada dentro dele, com a finalidade inicial de ganhar muito dinheiro, além de controlar e dominar todas as guerras do mundo, e então chegar a dominação mundial, porém por trás disso, existe um objetivo maior, o plano Olho da Lua (Tsuki no Me). O Time 7 e vários outros ninjas da aldeia lutam contra os membros da Akatsuki, somando-se também a missão de resgatar seu antigo companheiro Sasuke. Ao mesmo tempo, este trai Orochimaru e enfrenta Itachi para realizar sua vingança. Embora Itachi morra, Sasuke escuta uma revelação de um membro da Akatsuki, Madara Uchiha, onde explica que Itachi teve a ordem de eliminar seu clã dada pelo alto comando da aldeia. Entristecido por isso, Sasuke ingressa nas forças da Akatsuki com o objetivo de destruir a aldeia. Enquanto isso, vários membros da Akatsuki vão capturando as Bijuus e os Jinchūrikis, enquanto dois integrantes da organização, Pain e Konan, invadem e destroem a aldeia em busca de Naruto. Entretanto, Naruto vence Pain e o convence a deixar a Akatsuki. Em seguida, Pain utiliza suas últimas forças para reviver os habitantes da Aldeia da Folha. Imediatamente depois do ataque de Pain, o Raikage faz um chamado para as demais aldeias para discutir sobre Sasuke, o qual atacou a Aldeia Oculta da Nuvem, isto incita Naruto a dirigir-se ao País do Metal para negociar o castigo de Sasuke. Depois disso, Madara chega na reunião das Cinco Grandes Nações, explicando que sua intenção é obter o poder de todas as Bijuus e os utilizar em seu plano do “Olho da Lua”, que consiste em criar uma ilusão a nível global, suficientemente poderosa parta controlar a humanidade, através da lua. Diante disso, todos os líderes das cinco vilas ninjas, recusando lhe apoiar, se unem para confrontá-lo; por isso, decidem esconder os últimos Jinchūrikis dentro de uma ilha secreta no País do Trovão. Ali, Naruto conhece Killer Bee, um shinobi que contém a Gyuuki dentro dele, e Naruto pede ajuda para que o treine para que possa controlar de forma correta o chakra da Raposa de Nove Caudas. Depois de um árduo treinamento, Naruto obtêm com êxito o controle do poder da raposa, com a ajuda do espírito de sua mãe, Kushina Uzumaki. Com uma nova habilidade, Naruto descobre que Kisame Hoshigaki contêm as informações sobre o lugar onde se escondem as últimas bestas; este se suicida, mas consegue mandar a mensagem com êxito. Enquanto isso Madara vai em busca dos olhos de Nagato, matando Konan no processo, e manda Kabuto capturar os dois ninjas restantes.
+                    </p> <br>
+                    <p>
+                        <!-- Continuação do texto Parte II -->
+                        Graças ao conhecimento de Orochimaru, Kabuto utiliza um jutsu proibido e revive ninjas famosos para os utilizar na guerra que se aproxima, enquanto que a Aliança Shinobi se prepara de igual maneira. Dentre os mortos ressuscitados, estão Os Irmãos de Ouro e Prata, Ginkaku e Kinkaku, que possuem parte do chakra da Raposa de Nove Caudas, e devido a isto Naruto fica sabendo do que está se sucedendo. Uma vez que se da conta da guerra, Naruto foge com Bee e em seu caminho se encontra com Tsunade e o Raikage; este último tenta persuadi-los para que não se entrometam na batalha, mas Naruto se nega e finalmente o convence a deixá-los ir combater a Akatsuki. Os dois Jinchūrikis, com a ajuda de vários clones das sombras de Naruto, combatem um exército de Zetsus, seres criados a partir do DNA do primeiro Hokage, o que dá vantagem para as forças da Aliança; Gaara e os demais shinobis confrontam os ninjas revividos pelo Edo Tensei. Depois disso, Itachi e Nagato se encontram com Naruto e Bee, e começam a lutar; o Uchiha consegue libertar-se do controle de Kabuto sobre a técnica de ressurreição e ajuda os outros a derrotar Nagato. Pouco depois, Kabuto faz com que o segundo Tsuchikage reviva o seu mais poderoso guerreiro, Madara Uchiha; isto dá a entender que o verdadeiro líder da Akatuki, Tobi, usou na realidade esse nome com o fim de intimidar os seus adversários. Ōnoki – o atual Tsuchikage – e Gaara se veem encurralados pela força de Madara, mas os Kages restantes chegam para equilibrar a situação. Com a ajuda do rin'negan, Tobi cria uma armadilha para Naruto e Bee, já que tem sob o seu comando os cadáveres dos antigos Jinchūrikis com suas respectivas bestas seladas neles. A batalha contra Tobi se intensifica, e depois de descobrir como funciona o seu jutsu especial, conseguem revelar sua verdadeira identidade, o qual se trata de um antigo companheiro de Kakashi Hatake, Obito Uchiha, que presumia-se estar morto. Imediatamente o verdadeiro Madara Uchiha chega na batalha depois de derrotar os cinco Kages, e também o resto do exército ninja chega para apoiar Naruto, e nesse momento Madara e Obito revivem a besta de dez caudas. A luta continua com a chegada dos antigos 4 Hokages e Sasuke Uchiha, que decide apoiar Naruto. Durante a série de batalhas Obito usa o poder das dez caudas, e depois de uma série de eventos e da morte de alguns personagens, conseguem tirar este poder e liberar as Bijuus, as quais são retomados por Madara, que fere gravemente Naruto e Sasuke. Com a ajuda dos recém redimidos Kabuto e Obito, estes voltam a batalha, agora com os poderes incrementados proporcionados pelo sábio dos 6 caminhos, filho da Deusa Kaguya. Madara lança o Tsukuyomi Infinito com o qual se concretiza o plano do “Olho da Lua" (Tsuki no Me). Todos na Terra, com exceção de Naruto, Sasuke, Sakura, Kakashi e Obito entram dentro da ilusão. Depois Madara seria traído pelo Zetsu negro, que na realidade é filho de Kaguya, e este usa Madara para trazer a vida a sua mãe, a qual deseja recuperar todo o seu poder, absorvendo o poder de todos os que estavam presos dentro da ilusão, mas depois de uma batalha é selada junto com o Zetsu Negro. Nesse ponto Sasuke tenta matar os 5 Kages, as 9 Bijuus e Naruto (por consequência de ser o Jinchūriki de todas as 9 Bijuus), argumentando que deseja formar um mundo sem o sistema ninja, porém é vencido por Naruto na batalha final. Depois disso eles desfazem o Tsukuyomi Infinito com o rin'negan de Sasuke e o chakra das 9 Bijuus de Naruto. Após voltarem para a vila, Sasuke se redime e parte em viagens a fim de ver como o mundo a fora ficou após tudo isso e buscando redenção por seus pecados e Kakashi vira o sexto Hokage. Mais de 12 anos após o término da quarta grande guerra ninja, Naruto cumpre o seu sonho de se tornar o Hokage e ser reconhecido por todos da aldeia, ele se casa com Hinata e juntos tem um filho, Boruto Uzumaki, e uma filha, Himawari Uzumaki, enquanto Sasuke se casa com Sakura e juntos tem uma filha, Sarada Uchiha.
+                    </p>
+                </section>
+                <!-- Seção: Elementos da História -->
+                <section class="conteudo4-main">
+                    <div class="titulo-temas">
+                        <h2>
+                            <span>Elementos da História</span>
+                        </h2> 
+                    </div>
+                    <div class="boxImg-conteudo4">
+                        <figure>
+                            <img src="../assets/diagrama-missões.png" alt="Diagrama das Missões">
+                            <figcaption><i>Diagrama das Missões</i></figcaption>
+                        </figure>
+                        <figure>
+                            <img src="../assets/chakra.png" alt="Diagrama dos tipos de chakra">
+                            <figcaption><i>Diagrama dos tipos de chakra</i></figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        <!-- Texto sobre elementos da história -->
+                        Naruto tem um grande número de personagens que, em sua maioria, se distinguem por serem ninjas. A princípio estudam na Academia Ninja, porém logo são divididos em trios Genins (grupos de ninjas novatos), os quais são designados a um sensei experiente. Estes núcleos se convertem sucessivamente nas bases para a interação entre os personagens, onde as equipes são elegidas para missões de acordo com o seu desempenho e suas capacidades. O “Time 7” se converte pouco a pouco no marco social onde Naruto começa a conviver, para ir se familiarizando com seus companheiros Sasuke e Sakura, como também o seu sensei Kakashi, com quem integram o elenco principal da história. As outras equipes são formadas por antigos companheiro de classe de Naruto, com os quais ele se conecta por meio de vários aspectos, aprendendo suas vulnerabilidades e aspirações, aspectos que frequentemente relaciona com sua própria vida. Não obstante, não existem somente trios de ninjas, mas também existem exceções de conjuntos formados por múltiplos de três. No mundo de Naruto, os países operam como entidades políticas separadas, governadas por senhores feudais. Dentro destes países estão as aldeias ocultas (隠れ里, kakurezato) (assentamentos de habitações ninjas). Uma aldeia oculta mantém a economia do país por meio da formação de jovens ninjas desde da infância, utilizando-os para realizar missões em outros países e cobrar por elas. O ninja de uma aldeia oculta também serve como uma força militar para o país de origem. Cabe mencionar que os líderes das aldeias ocultas estão em igual posição com os líderes dos respectivos países. Na trama, existem cinco países diferentes: o País do Vento, o País do Fogo, o País do Trovão, o País da Água e o País da Terra (conhecidos integralmente como as “Cinco Grandes Nações Shinobis”). Estes países são os mais poderosos no mundo de Naruto, sendo governados por um senhor feudal, enquanto que os líderes das aldeias ocultas nos ditos países ostentam o título de Kage. Foram mencionados outras nações aparentemente mais pequenas no mangá e no anime, mas suas informações não foram todas reveladas.
+                    </p>
+                </section>
+                <!-- Seção: Personagens -->
+                <section class="conteudo5-main">
+                    <div class="titulo-temas">
+                        <h2>
+                            <span>Personagens</span>
+                        </h2> 
+                    </div>
+                    <p>
+                        <!-- Texto sobre personagens principais -->
+                        A grande maioria dos personagens introduzidos na série são ninjas provenientes das aldeias e facções que aparecem na história. Os protagonistas pertencem a Aldeia Oculta da Folha e o enredo é narrado em sua maioria em torno de suas aventuras.
+                    </p>
+                    <p>
+                        O personagem principal que dá nome a série é Naruto Uzumaki (うずまきナルト), um jovem ninja que carrega em seu interior o demônio Kyūbi, e deseja ser o Hokage de sua aldeia, já que ninguém queria estar perto dele por causa da Kyūbi e para demonstrar seu verdadeiro poder, como igualmente sua valentia. Seus companheiros de grupo (no início da série) são Sasuke, Sakura e Kakashi (este último seu mestre sensei). Com o desenrolar da história, o grupo muda a partir do momento que Sasuke decide abandonar a aldeia para realizar sua vingança pessoal. Pouco depois, Naruto se converte em aprendiz de Jiraiya, um pervertido guerreiro.
+                    </p>
+                    <p>
+                        Sasuke Uchiha (うちはサスケ) é um membro da clã Uchiha. É um garoto sério, e possui uma grande habilidade para as artes ninjas estilo de fogo. Seu objetivo é ser suficientemente forte para derrotar seu irmão maior Itachi, que assassinou todos os demais membros do seu clã. Em seguida, abandonará a aldeia para treinar com Orochimaru, um ninja corrompido e sem piedade, que busca dominar todos os ninjutsus do mundo.
+                    </p>
+                    <p>
+                        A única garota do grupo é Sakura Haruno (春野サクラ), que inicialmente está apaixonada por Sasuke, tal como todas as suas companheiras da Academia Ninja e despreza Naruto. Ao avançar da história, Sakura começa a gostar da amizade de Naruto. Se torna aprendiz de Tsunade, com quem aprende técnicas medicinais ninjas.
+                    </p>
+                    <p>
+                        Kakashi Hatake é o primeiro mestre da equipe de Naruto, Sasuke e Sakura. É um ninja experiente, severo a primeira vista e amante das novelas para adultos, e se preocupa muito com o trabalho em equipe. Possui um Kekkei Genkai, o Sharingan em seu olho esquerdo, o qual obteve por parte de um membro do clã Uchiha que era seu amigo (Obito Uchiha). Com este olho, Kakashi copiou muitas técnicas de outros ninjas, o que lhe rendeu o nome de “O Ninja que Copia”.
+                    </p>
+                    <p>
+                        Os demais personagens principais se encontram nas outras equipes ninjas que compartilharam a classe com Naruto na Academia Ninja, junto com seus respectivos mestres. Destacam os times formados por Ino, Choji, Shikamaru e o sensei Asuma, o de Hinata, Kiba, Shino e o sensei Kurenai, e o time formado por Rock Lee, Tenten, Neji e o sensei Maito Gai.
+                    </p>
+                    <p>
+                        Outros personagens importantes para a história são os “Três Ninjas Lendários” (Tsunade, Jiraiya e Orochimaru), além dos membros da Organização Akatsuki, formado por ninjas renegados de diversas procedências, cujo objetivo é capturar os demônios Bijuu por um motivo que será revelado conforme avança a história. Esta organização foi criado sob a influência de Obito Uchiha, que junto com Madara Uchiha e a Deusa Kaguya seriam os três antagonistas principais.
+                    </p>
+                </section>
+                <!-- Seção: Produção -->
+                <section class="conteudo6-main">
+                    <div class="titulo-temas">
+                        <h2>
+                            <span>Produção</span>
+                        </h2> 
+                    </div>
+                    <div class="boxImg-conteudo6">
+                        <figure>
+                            <img src="../assets/criador.png" alt="Masashi Kishimoto">
+                            <figcaption><i>Masashi Kishimoto</i></figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        <!-- Texto sobre a produção da série -->
+                        O autor da série, Masashi Kishimoto, primeiro autorizou o one-shot de Naruto em agosto de 1997 na revista Akamaru Jump. O Naruto original tinha uma temática significante de amizade e confiança. No início da história, nem Naruto e nem Kuroda confiavam em ninguém, mas no final os dois se tornam amigos e passam a confiar um no outro. Apesar dos bons resultados na pesquisa com leitores depois do lançamento, Kishimoto pensou: "a arte está ruim e a história uma bagunça!". Kishimoto também revelou que ele estava originalmente trabalhando no mangá Karakuri para o Hop Step Award quando, insatisfeito com as mudanças da história, decidiu trabalhar em algo diferente, o que o levou a criar Naruto.
+                    </p>
+                    <p>
+                        Quando estava a criar a história de Naruto, Kishimoto olhou para outros mangás do estilo shonen para influenciar o seu trabalho, apesar dele tentar tornar seus personagens serem únicos o máximo possível. A separação dos personagens em diferentes times teve a intenção de dar a cada grupo um sabor especial. Kishimoto queria que cada membro fosse "extremo", tendo uma grande quantidade de aptidão em um atributo mas não tendo talento em outro.
+                    </p>
+                    <p>
+                        A inserção dos vilões na história foi principalmente para agir como contrapartes para os valores morais dos personagens. Kishimoto admitiu que esse foco em ilustrar as diferenças de valores nos vilões foi tão importante na hora da criação dos vilões que "Eu não pensei realmente como eles seriam em combate". Quando desenhava os personagens, Kishimoto seguiu um processo de cinco partes que ele seguia continuamente: "concept and rough sketch, drafting, inking, shading, and coloring". Esses passos foram usados quando ele desenhou o mangá atual e fez as ilustrações coloridas dos tankobon, as capas da Weekly Shonen Jump, e outras mídias, mas as ferramentas que ele usava mudavam ocasionalmente. Por exemplo, ele usou um "airbrush" em uma ilustração para uma capa da Weekly Shonen Jump, mas decidiu não usar mais para desenhos futuros por causa da grande quantidade de correções que era necessário.
+                    </p>
+                    <p>
+                        Kishimoto também falou que precisa definir algumas regras para ele poder criar a história mais facilmente. Kishimoto queria representar a tradição do zodíaco chinês, que tem uma grande presença no Japão, assim criando os símbolos com as mãos usados para fazer os jutsus. Quando Kishimoto estava criando o cenário da série ele inicialmente se concentrou em fazer o design da Vila da Folha, o ambiente inicial da série.
+                    </p>
+                    <p>
+                        Kishimoto falou que o design da Vila da Folha foi criado "bem espontaneamente sem muitas reflexões", apesar dele admitir que o cenário é baseado na sua casa na Prefeitura de Okayama no Japão. Sem ter um período de tempo específico, Kishimoto incluiu elementos modernos na série como lhe convinha, mas especificamente excluindo as armas projéteis e os veículos. Para o material de referência, Kishimoto fez sua própria pesquisa na cultura japonesa - e as incluiu em seu trabalho. Quanto a tecnologia, Kishimoto falou que Naruto não teria armas de fogo. Ele disse que talvez incluisse automóveis, aviões, e computadores com pouco poder de processamento. Ainda confirmou em uma outra entrevista que pensa no último capítulo da série dando um grande desfecho para a trama.
+                    </p>
+                </section>
+                <section class="conteudo7-main"></section>
+            </section>
+        </main>
+
+        <!--
+            Rodapé do site:
+            - Informações do editor.
+            - Links institucionais.
+            - Imagem decorativa.
+        -->
+        <footer class="rodape" role="contentinfo" aria-label="Rodapé">
+            <div id="box-rodape">
+                <div class="box-esquerda">
+                    <div class="indice-rodape">
+                        <div class="inicio-esquerda">
+                            <h2>Editado por: </h2>
+                            <span title="editor"> 
+                                <img src="../assets/icones-pagina/icone-user.svg" alt="Ícone de usuário">
+                                <h3>Gabriel Ferreira de Souza</h3>
+                            </span>
+                            <span title="linha"></span>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="" aria-label="Política de Privacidade">
+                                    Política de Privacidade
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" aria-label="Sobre a Wikipédia">
+                                    Sobre a Wikipédia
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" aria-label="Termos de uso">
+                                    Termos de uso
+                                </a>
+                            </li>
+                            <li>    
+                                <a href="" aria-label="Código de conduta">
+                                    Código de conduta 
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box-direita">
+                    <img src="../assets/imagem-rodape.png" alt="Imagem decorativa do rodapé">
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--
+        Inclusão do script principal da página.
+    -->
+    <script src="newPage.js"></script>
+
+</body>
+</html>
