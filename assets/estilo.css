@@ -1,0 +1,110 @@
+/* Estilos gerais para a página */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+    scroll-behavior: smooth; /* Adiciona rolagem suave ao clicar nos links */
+}
+
+/* A div principal que segura todo o conteúdo */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* A div do topo */
+.topo {
+    padding: 25px 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre o logo e o título */
+}
+
+.logo {
+    background-color: #ff6600;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-shrink: 0; /* Impede que o logo encolha */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+.topo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Container para as 3 colunas */
+.conteudo-principal {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+/* Estilo geral para as colunas */
+.coluna {
+    padding: 20px;
+    min-height: 450px;
+}
+
+/* Ajuste de largura das colunas */
+.coluna-menu {
+    flex: 2; /* Ocupa 2 partes do espaço */
+    text-align: center;
+}
+.coluna-conteudo {
+    flex: 6; /* Ocupa 6 partes, mais espaço para o texto */
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.coluna-ancoras {
+    flex: 2; /* Ocupa 2 partes */
+}
+
+/* Estilos específicos do conteúdo e âncoras */
+.coluna-conteudo section {
+    margin-bottom: 25px; /* Espaço entre as seções de texto */
+}
+
+.coluna-conteudo h3 {
+    margin-top: 0;
+    color: #ff6600;
+}
+
+.coluna-conteudo p {
+    text-align: justify; /* Texto justificado para melhor leitura */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+.coluna-ancoras h3 {
+    margin-top: 0;
+}
+
+.coluna-ancoras ul {
+    list-style: none; /* Remove os pontos da lista */
+    padding: 0;
+}
+
+.coluna-ancoras li {
+    margin-bottom: 10px;
+}
+
+.coluna-ancoras a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #007bff;
+    font-weight: bold;
+}
+
+.coluna-ancoras a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    color: #0056b3;
+}
