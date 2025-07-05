@@ -1,0 +1,145 @@
+/* GLOBAL */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 2.027rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.802rem;
+  font-weight: inherit;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1.296rem;
+  font-weight: 500;
+}
+/* Seção Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  margin: 0;
+  text-align: center;
+}
+
+.logo-container figcaption {
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.logo,
+#description-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Espaço entre os ícones */
+  width: 25rem;
+  margin-top: 1rem;
+}
+
+figure {
+  text-align: center;
+}
+
+/* Seção Nav*/
+
+ul {
+  list-style: none;
+  padding-left: 5px;
+}
+.links:link {
+  color: #36c;
+  text-decoration: none;
+}
+
+.links:visited {
+  color: #6a60b0;
+}
+
+.sidebar {
+  border-right: solid 1px #cdcdcd;
+}
+.bar {
+  background-color: #f9f9fb;
+  padding: 15px;
+  border-top: solid 1px #cdcdcd;
+  border-bottom: solid 1px #cdcdcd;
+}
+.content {
+  max-width: 1440px;
+  margin: auto;
+  grid-gap: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-areas: 'sidebar main anchors';
+  grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Seção main */
+
+.logo-thewalking,
+.logo-aneis,
+.logo-vikings {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.img-thewalking,
+.img-aneis,
+.img-vikings {
+  border-style: dashed;
+  padding: 0.09rem;
+}
+/* Seção âncora */
+.anchors {
+  border-left: solid 1px #cdcdcd;
+  padding-left: 15px;
+}
+
+/* Seção footer */
+
+.footer {
+  min-height: 100px;
+  border-top: solid 1px #cdcdcd;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #36c;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer a:hover {
+  text-decoration: underline; /* ou 'none' se quiser nem aparecer no hover */
+  color: blue;
+}
+
+.footer-politic {
+  padding-left: 2.75rem;
+  padding-right: 2.75rem;
+}

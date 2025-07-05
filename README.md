@@ -1,19 +1,36 @@
-# Módulo 3 - Trilha HTML
+# Desafio: Trilha HTML - Dio.me Módulo 03
 
-**Título:** Recriando Wikipedia, com um layout melhor :)
+**Título:** Recriando Wikipedia, com um layout melhor.
 
-## Objetivo
-Este desafio consiste em treinar você com relação a estrutura do site, e também aplicar conhecimentos adiquiridos sobre semântica e acessibilidade.
+## Sobre o Projeto
 
-## Desafio
-Neste repositório tem uma estrutura básica já pré-montada de um layout simples com um pouco de CSS aplicado. Apenas para deixar mais apresentável.
+Este projeto faz parte do Módulo 03 - O objetivo consiste em treinar estruturas html e aplicar conhecimentos adquiridos sobre semântica e acessibilidade durante o curso de Bootcamp Santander e dio.me.
 
-Fiquem a vontade para criar da forma que desejarem, e sobre os temas que quiserem. O intuito aqui é divertir, e ao mesmo tempo aprender com o desafio.
+## Descrição do Desafio
 
-Sigam as intruções da chamada do vídeo. Acredito que por lá, ficará mais fácil de entenderem como proceder.
+A ideia do desafio é recriar o site do wikipédia com uma estrutura HTML básica.
 
-## Links úteis
-- [Download do NVDA](https://www.nvaccess.org/download/)
-- [Wikipedia](https://pt.wikipedia.org/)
+O projeto incorpora conceitos aprendidos, como:
+
+- Estrutura básica do HTML com as tags &lt;html&gt;, &lt;head&gt;, &lt;body&gt;.
+- Uso de elementos semânticos como &lt;main&gt;, &lt;header&gt; &lt;nav&gt; e &lt;footer&gt;.
+- Exibição de "alt" e figure para acessibilidade.
+
+## Tecnologias Utilizadas
+
+- HTML5: Linguagem de marcação para estruturação do site.
+- Css: Linguagem de estilo utilizada para definir a apresentação visual da página HTML.
+
+## Aprendizados
+
+- Estruturação semântica de um documento HTML.
+- Uso correto de tags para formatação de texto e organização de conteúdo.
+- Importância de elementos semânticos (&lt;main&gt;, &lt;header&gt;, &lt;footer&gt;) para acessibilidade e SEO.
+- Aplicação prática de listas ordenadas e não ordenadas.
+
+## Contato
+
+GitHub: [https://github.com/LuizSilvaCarvalho]
+Linkedin: [https://www.linkedin.com/in/luiz-fernando-silva-carvalho/]
 
 
