@@ -1,44 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca de Alexandria</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="Logo da Biblioteca Virtual" width="200" />
+      </div>
+    </header>
 
-    <div>   
-        <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
-    </div>
-
-    <div class="bar"></div>
+    <nav class="bar" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Bibliotecas</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
 
     <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
-            <ul>
-                <li><a href="#">Links</a></li>
-            </ul>
-        </div>
+      <aside class="sidebar" aria-label="Menu lateral">
+        <h2>Bibliotecas</h2>
+        <ul>
+          <li><a href="#">Biblioteca de Alexandria</a></li>
+        </ul>
+      </aside>
 
-        <div class="main">
-            
-        </div>
+      <main>
+        <article>
+          <header>
+            <h1>O que foi a Biblioteca de Alexandria?</h1>
+          </header>
 
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
-            <ul>
-                <li><a href="#">Âncoras</a></li>
-            </ul>
-        </div>
+          <figure>
+            <img
+              src="https://cdnm.westwing.com.br/glossary/uploads/br/2015/06/14142520/vista-externa-da-biblioteca_Shivani-Singh04-via-wikipedia_c-a3924.jpg"
+              alt="Bibliotheca Alexandrina moderna, fachada com arquitetura futurista"
+              width="100%"
+            />
+            <figcaption>Bibliotheca Alexandrina moderna, Egito</figcaption>
+          </figure>
+
+          <section aria-labelledby="sobre">
+            <h2 id="sobre">História e Origem</h2>
+            <p>
+              A Biblioteca de Alexandria foi uma das mais célebres bibliotecas da Antiguidade, estabelecida no século III a.C. no Egito. Ela fazia parte de um centro de pesquisa chamado Mouseion, e foi idealizada por Demétrio de Faleros e promovida por Ptolemeu I Sóter.
+            </p>
+            <p>
+              Estima-se que chegou a conter entre 30 mil e 700 mil rolos de papiro com obras literárias, científicas e religiosas. O acervo cresceu tanto que uma filial foi criada no Serapeu de Alexandria.
+            </p>
+          </section>
+
+          <section aria-labelledby="contexto">
+            <h2 id="contexto">Contexto histórico</h2>
+            <p>
+              A Biblioteca de Alexandria não foi a primeira do mundo. Muitas civilizações, como os sumérios, babilônios e assírios, já possuíam acervos escritos. Sua criação foi inspirada nessas tradições orientais e gregas.
+            </p>
+          </section>
+
+          <section aria-labelledby="incendio">
+            <h2 id="incendio">Incêndio por Júlio César</h2>
+            <p>
+              Em 48 a.C., durante um cerco em Alexandria, Júlio César incendiou sua própria frota, e as chamas se espalharam pela cidade, atingindo a biblioteca. Estima-se que cerca de 40 mil obras foram destruídas.
+            </p>
+            <figure>
+              <img
+                src="https://segredosdomundo.r7.com/wp-content/uploads/2020/02/biblioteca-de-alexandria-o-que-era-e-a-historia-por-tras-do-incendio-10.jpg"
+                alt="Ilustração representando o incêndio da Biblioteca de Alexandria"
+                width="100%"
+              />
+              <figcaption>Representação artística do incêndio da Biblioteca</figcaption>
+            </figure>
+          </section>
+        </article>
+
+        <section aria-labelledby="sugestoes">
+          <h2 id="sugestoes">Envie sua sugestão</h2>
+          <p>Gostaria de contribuir com alguma informação ou corrigir algo? Envie sua sugestão para nós!</p>
+
+          <form action="#" method="post" aria-label="Formulário de sugestões" autocomplete="on">
+            <fieldset>
+              <legend>Informações de contato</legend>
+
+              <div>
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required aria-required="true" />
+              </div>
+
+              <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required aria-required="true" />
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Mensagem</legend>
+
+              <div>
+                <label for="mensagem">Sua sugestão:</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="6"
+                  required
+                  aria-required="true"
+                  aria-describedby="descricaoSugestao"
+                ></textarea>
+                <p id="descricaoSugestao">
+                  Descreva com clareza sua sugestão ou comentário sobre o conteúdo da página.
+                </p>
+              </div>
+            </fieldset>
+
+            <button type="submit">Enviar sugestão</button>
+          </form>
+        </section>
+      </main>
+
+      <aside class="anchors" aria-label="Navegação interna">
+        <h2>Neste artigo</h2>
+        <ul>
+          <li><a href="#sobre">História e Origem</a></li>
+          <li><a href="#contexto">Contexto histórico</a></li>
+          <li><a href="#incendio">Incêndio por Júlio César</a></li>
+          <li><a href="#sugestoes">Envie sua sugestão</a></li>
+        </ul>
+      </aside>
     </div>
 
-    <div class="footer">
-
-    </div>
-</body>
+    <footer class="footer" role="contentinfo">
+      <p>&copy; 2025 Biblioteca Virtual. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
