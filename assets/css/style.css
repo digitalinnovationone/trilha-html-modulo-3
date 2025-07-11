@@ -36,3 +36,7 @@ a { color:blue; text-decoration: none;}
 figure {
     text-align: center;
 }
+p{
+    text-indent: 30px;
+    text-align: justify;
+}
