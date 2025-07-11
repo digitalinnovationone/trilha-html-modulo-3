@@ -36,3 +36,20 @@ a { color:blue; text-decoration: none;}
 figure {
     text-align: center;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: sans-serif;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+
+  thead {
+    background-color: #222;
+    color: white;
+  }
