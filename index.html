@@ -1,44 +1,251 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Friends – Mini‑Wikipedia</title>
+
+  <!-- Google Fonts que lembram a abertura de FRIENDS (pontinhos coloridos) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Fredoka+One&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ——— Paleta inspirada na abertura ——— */
+    :root {
+      --friends-black: #1b1b1b;
+      --friends-white: #ffffff;
+      --friends-yellow: #ffd42d;
+      --friends-blue: #00a2ff;
+      --friends-red: #ff5959;
+      --friends-purple: #a17cf0;
+      --friends-green: #00c48c;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Cabin", Arial, sans-serif;
+      line-height: 1.6;
+      background: var(--friends-white);
+      color: var(--friends-black);
+    }
+
+    /* Top bar with logo */
+    .logo {
+      background: var(--friends-black);
+      padding: 1rem;
+      text-align: center;
+    }
+    .logo img {
+      max-width: 200px;
+      filter: drop-shadow(0 0 5px var(--friends-yellow));
+    }
+
+    .bar {
+      height: 6px;
+      background: linear-gradient(to right, var(--friends-red), var(--friends-yellow), var(--friends-blue), var(--friends-green), var(--friends-purple));
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 240px 1fr 200px;
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+
+    /* Sidebar & Anchors */
+    .sidebar, .anchors {
+      background: #faf9f9;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1rem;
+      position: sticky;
+      top: 1rem;
+      height: fit-content;
+    }
+    .sidebar h2, .anchors h2 {font-family: "Fredoka One", cursive; font-size: 1.3rem; margin-top: 0; text-align:center;}
+    .sidebar ul, .anchors ul {list-style: none; padding: 0; margin: 0;}
+    .sidebar li, .anchors li {margin: .5rem 0;}
+    .sidebar a, .anchors a {text-decoration:none; color: var(--friends-black); font-weight:600;}
+    .sidebar a:hover, .anchors a:hover {color: var(--friends-purple);}    
+
+    /* Main article */
+    .main {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .main h2 {font-family: "Fredoka One", cursive; margin-top: 2rem; color: var(--friends-purple);}  
+    .main h3 {color: var(--friends-blue);}  
+    .main p, .main li {font-size: 1.05rem;}
+
+    /* Footer */
+    .footer {
+      background: var(--friends-black);
+      color: var(--friends-white);
+      text-align: center;
+      padding: .8rem;
+      font-size: .9rem;
+    }
+
+    /* Media */
+    figure {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+    figure img {max-width: 100%; border-radius: 8px;}
+    figcaption {font-size: .9rem; color: #6d6d6d; margin-top: .5rem;}
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .content {grid-template-columns: 1fr;}
+      .sidebar, .anchors {display:none;}
+    }
+    
+  </style>
 </head>
 <body>
+  <!-- Logo + Theme Song (audio) -->
+  <header class="logo" aria-label="Logo Friends e tema musical">
+    <img src="assets/images/friends.png" alt="Friends logo" />
+    <audio controls preload="metadata" style="margin-top:1rem;">
+      <source src="assets/audio/I e 39ll be there for you - The Rebrandts Tema de Friends/Friends Theme song with.mp3" type="audio/mpeg" />
+      Seu navegador não suporta o elemento <code>audio</code>.
+    </audio>
+  </header>
 
-    <div>   
-        <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
-    </div>
+  <div class="bar" aria-hidden="true"></div>
 
-    <div class="bar"></div>
+  <main class="content">
+    <!-- Sidebar -->
+    <nav class="sidebar" aria-label="Navegação lateral">
+      <h2>Conteúdo</h2>
+      <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#sinopse">Sinopse</a></li>
+        <li><a href="#personagens">Personagens</a></li>
+        <li><a href="#temporadas">Temporadas</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+        <li><a href="#legado">Legado Cultural</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ul>
+    </nav>
 
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
-            <ul>
-                <li><a href="#">Links</a></li>
-            </ul>
-        </div>
+    <!-- Main article -->
+    <article class="main" aria-label="Artigo principal sobre a série Friends">
+      <section id="introducao">
+        <h2>Introdução</h2>
+        <p><strong>Friends</strong> é uma série de televisão americana do gênero <i>sitcom</i>, criada por <a href="https://pt.wikipedia.org/wiki/David_Crane_(produtor)" target="_blank" rel="noopener">David Crane</a> e <a href="https://pt.wikipedia.org/wiki/Marta_Kauffman" target="_blank" rel="noopener">Marta Kauffman</a>.</p>
+        <p>Foi exibida originalmente pela <abbr title="National Broadcasting Company">NBC</abbr> de <time datetime="1994-09-22">22 de setembro de 1994</time> a <time datetime="2004-05-06">6 de maio de 2004</time>.</p>
+        <figure>
+          <img src="assets/images/friends_cast.jpeg" alt="Elenco completo de Friends sentado no sofá laranja" />
+          <figcaption>Elenco principal.</figcaption>
+        </figure>
+      </section>
 
-        <div class="main">
-            
-        </div>
+      <section id="sinopse">
+        <h2>Sinopse</h2>
+        <p>A série acompanha um grupo de seis amigos — Rachel, Monica, Phoebe, Joey, Chandler e Ross — que vivem em Manhattan, Nova York, enquanto lidam com relacionamentos, trabalho e crescimento pessoal.</p>
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+            <iframe 
+              src="https://www.youtube.com/embed/s2TyVQGoCYo" 
+              title="Trailer Friends" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+            </iframe>
+      </section>
 
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
-            <ul>
-                <li><a href="#">Âncoras</a></li>
-            </ul>
-        </div>
-    </div>
+      <section id="personagens">
+        <h2>Personagens Principais</h2>
+        <article>
+          <h3>Rachel Green</h3>
+          <p><strong>Rachel</strong> começa como garçonete e evolui para o mundo da moda. Interpretada por <u>Jennifer Aniston</u>.</p>
+        </article>
+        <article>
+          <h3>Monica Geller</h3>
+          <p><strong>Monica</strong> é uma chef competitiva e irmã de Ross. Interpretada por <u>Courtney Cox</u>.</p>
+        </article>
+        <article>
+          <h3>Phoebe Buffay</h3>
+          <p><strong>Phoebe</strong> é excêntrica e canta músicas como “<mark>Smelly Cat</mark>”. Interpretada por <u>Lisa Kudrow</u>.</p>
+        </article>
+        <article>
+          <h3>Joey Tribbiani</h3>
+          <p><strong>Joey</strong> é ator e ama comida. Conhecido pelo bordão: <q>How you doin'?</q>. Interpretado por <u>Matt LeBlanc</u>.</p>
+        </article>
+        <article>
+          <h3>Chandler Bing</h3>
+          <p><strong>Chandler</strong> é sarcástico e trabalha com análise de dados. Interpretado por <u>Matthew Perry</u>.</p>
+        </article>
+        <article>
+          <h3>Ross Geller</h3>
+          <p><strong>Ross</strong> é paleontólogo e irmão de Monica. Interpretado por <u>David Schwimmer</u>.</p>
+        </article>
+      </section>
 
-    <div class="footer">
+      <section id="temporadas">
+        <h2>Temporadas</h2>
+        <p>A série possui <strong>10 temporadas</strong>. Confira:</p>
+        <ol>
+          <li>1ª Temporada (1994–1995)</li>
+          <li>2ª Temporada (1995–1996)</li>
+          <li>3ª Temporada (1996–1997)</li>
+          <li>4ª Temporada (1997–1998)</li>
+          <li>5ª Temporada (1998–1999)</li>
+          <li>6ª Temporada (1999–2000)</li>
+          <li>7ª Temporada (2000–2001)</li>
+          <li>8ª Temporada (2001–2002)</li>
+          <li>9ª Temporada (2002–2003)</li>
+          <li>10ª Temporada (2003–2004)</li>
+        </ol>
+      </section>
 
-    </div>
+      <section id="curiosidades">
+        <h2>Curiosidades</h2>
+        <ul>
+          <li>Os atores começaram ganhando US$22 mil por episódio e terminaram com US$1 milhão por episódio.</li>
+          <li>A moldura amarela da porta do apartamento de Monica foi um acidente de produção.</li>
+          <li>O <em>Central Perk</em> foi inspirado em um café de Nova York chamado “The Little Owl”.</li>
+        </ul>
+      </section>
+
+      <section id="legado">
+        <h2>Legado Cultural</h2>
+        <p>A série deixou frases marcantes como <q>We were on a break!</q> (Ross) e <q>Oh. My. God!</q> (Janice).</p>
+        <p>Hoje, <del>Friends é apenas mais uma série</del> <ins>Friends é um ícone da cultura pop!</ins></p>
+      </section>
+
+      <section id="referencias">
+        <h2>Referências</h2>
+        <ul>
+          <li><a href="https://pt.wikipedia.org/wiki/Friends" target="_blank" rel="noopener">Wikipedia – Friends</a></li>
+          <li><a href="https://www.imdb.com/title/tt0108778/" target="_blank" rel="noopener">IMDb – Friends</a></li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- Anchors -->
+    <aside class="anchors" aria-label="Navegação rápida no artigo">
+      <h2>Neste Artigo</h2>
+      <ul>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#sinopse">Sinopse</a></li>
+        <li><a href="#personagens">Personagens</a></li>
+        <li><a href="#temporadas">Temporadas</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+        <li><a href="#legado">Legado</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p><small>Projeto desenvolvido para o desafio "Recriando Wikipedia com HTML" – Série Friends.</small></p>
+  </footer>
 </body>
 </html>
