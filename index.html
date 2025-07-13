@@ -1,44 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    ul { list-style: none; padding-left: 5px; }
+    a { color:blue; text-decoration: none; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    header .logo {
+      align-self: flex-start;
+      margin-left: 1rem;
+    }
+    header .bar {
+      background-color: #f9f9fb;
+      padding: 15px;
+      border-top: solid 1px #cdcdcd;
+      border-bottom: solid 1px #cdcdcd;
+      width: 100%;
+    }
+    main {
+      max-width: 1440px;
+      margin: auto;
+      display: grid;
+      gap: 3rem;
+      grid-template-areas: "sidebar main anchors";
+      grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    footer {
+      min-height: 100px;
+      border-top: solid 1px #cdcdcd;
+    }
+    aside.anchors {
+      border-left: solid 1px #cdcdcd;
+      padding-left: 15px;
+    }
+    aside.sidebar {
+      border-right: solid 1px #cdcdcd;
+    }
+    figure {
+      margin: 0;
+    }
+    img.responsive {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      margin-top: 1rem;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid #cdcdcd;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
 
-    <div>   
-        <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
-    </div>
-
+  <header>
+    <figure class="logo">
+      <img src="assets/images/logo-wikipedia.png" width="200" alt="Logo da Wikipedia" />
+    </figure>
     <div class="bar"></div>
+  </header>
 
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
-            <ul>
-                <li><a href="#">Links</a></li>
-            </ul>
-        </div>
+  <main>
+    <aside class="sidebar" style="grid-area: sidebar">
+      <h2>Dark</h2>
+      <ul>
+        <li><a href="#sinopse">Sinopse Geral</a></li>
+        <li><a href="#imagem">Imagem Promocional</a></li>
+        <li><a href="#elenco">Elenco</a></li>
+        <li><a href="#temporadas">Temporadas</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+      </ul>
+    </aside>
 
-        <div class="main">
-            
-        </div>
+    <section class="main" style="grid-area: main">
+      <h1>Tudo sobre a Série Dark</h1>
 
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
-            <ul>
-                <li><a href="#">Âncoras</a></li>
-            </ul>
-        </div>
-    </div>
+      <h2 id="sinopse">Sinopse Geral</h2>
+      <p><strong>Dark</strong> (estilizado como <em>D A R K</em> ou <em>D A Я K</em>) é uma aclamada e premiada série alemã de drama, suspense e ficção científica criada por Baran bo Odar e Jantje Friese e eleita em votação popular no site Rotten Tomatoes como a melhor série original Netflix.</p>
+      <p>A trama da série se passa na fictícia cidade alemã de Winden, quando quatro famílias iniciam uma busca desesperada por respostas após o desaparecimento de duas crianças que aparenta estar relacionado a um outro desaparecimento ocorrido 33 anos antes. Aos poucos, segredos familiares passam a ser expostos e um complexo mistério envolvendo três gerações começa a se revelar.</p>
+      <p>Ao longo da série, <strong>Dark</strong> explora as implicações existenciais do tempo e seus efeitos sobre a natureza humana.</p>
 
-    <div class="footer">
+      <h2 id="imagem">Imagem Promocional</h2>
+      <img src="assets/images/dark-promo.jpg" alt="Imagem promocional da série Dark" class="responsive" />
 
-    </div>
+      <h2 id="elenco">Elenco</h2>
+      <p>A série conta com um elenco talentoso, incluindo:</p>
+      <ul>
+        <li>Louis Hofmann como Jonas Kahnwald</li>
+        <li>Maja Schöne como Hannah Kahnwald</li>
+        <li>Lisa Vicari como Martha Nielsen</li>
+        <li>Andreas Pietschmann como Jonas adulto</li>
+        <li>Dieter Bach como Noah</li>
+      </ul>
+
+      <h2 id="temporadas">Temporadas</h2>
+      <p>Dark é composta por três temporadas:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Temporada</th>
+            <th>Ano</th>
+            <th>Sinopse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1ª Temporada</strong></td>
+            <td>2017</td>
+            <td>Seguimos Jonas Kahnwald, um adolescente lidando com o suicídio do pai; o policial Ulrich Nielsen, cujo filho desaparece como seu irmão 33 anos antes; e a chefe de polícia Charlotte Doppler. A história começa em 2019 e se expande para 1986 e 1953 com viagens no tempo por um buraco de minhoca nas cavernas da usina nuclear. Segredos das famílias Kahnwald, Nielsen, Doppler e Tiedemann vão sendo revelados.</td>
+          </tr>
+          <tr>
+            <td><strong>2ª Temporada</strong></td>
+            <td>2019</td>
+            <td>As famílias tentam reunir-se com entes queridos desaparecidos, agora também em 2020, 1987 e 1954. Jonas viaja até 2053 e 1921, revelando a existência da organização Sic Mundus, que estuda e manipula viagens no tempo. A cidade caminha para um evento apocalíptico em 2020.</td>
+          </tr>
+          <tr>
+            <td><strong>3ª Temporada</strong></td>
+            <td>2020</td>
+            <td>A série introduz um mundo paralelo interligado ao original. A história passa por 1888, 1954, 1987, 2020 e 2053 no mundo original, e por 2019 e 2052 no paralelo. Os personagens tentam romper o ciclo eterno de tragédias em ambos os mundos.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="curiosidades">Curiosidades</h2>
+      <ul>
+        <li>Foi a primeira série original da Netflix produzida na Alemanha.</li>
+        <li>A trilha sonora é assinada por Ben Frost, com atmosfera sombria e envolvente.</li>
+        <li>Dark foi comparada a Stranger Things, mas logo mostrou identidade própria e mais complexa.</li>
+      </ul>
+    </section>
+
+    <aside class="anchors" style="grid-area: anchors">
+      <h2>Neste Artigo</h2>
+      <ul>
+        <li><a href="#sinopse">Sinopse Geral</a></li>
+        <li><a href="#imagem">Imagem Promocional</a></li>
+        <li><a href="#elenco">Elenco</a></li>
+        <li><a href="#temporadas">Temporadas</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p style="padding: 1rem;">&copy; 2025 Página dedicada à série Dark</p>
+  </footer>
 </body>
 </html>
