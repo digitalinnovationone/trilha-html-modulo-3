@@ -1,10 +1,54 @@
-body, html {
+*{
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+.header{
+    display: flex;  
+    justify-content: space-between;
+    padding: 1rem;
+}
+.botao-hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.botao-hamburguer .linha {
+  height: 4px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+}
+.navegacao-usuario ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;    
+}
+.navegacao-usuario a{
+    text-decoration: none;
+    color: black;
+}
+.header button{
+    cursor: pointer;
+}
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .bar {
     background-color: #f9f9fb;
     padding:15px;
@@ -22,17 +66,57 @@ a { color:blue; text-decoration: none;}
     padding-left: 1rem;
     padding-right: 1rem;
 }
+.main p{
+    text-align: left;
+}
+.img-principal{
+    display: flex;
+    justify-content: center;
+}
+.img-principal img{
+    border-radius: 1rem;
+    width: 500px;
+}
 .footer {
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
 }
-.anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
-}
+
+
 .sidebar {
     border-right: solid 1px #cdcdcd;
+    padding: 1rem;
 }
-figure {
-    text-align: center;
+.sidebar ul{
+    list-style: none;
+}
+.sidebar a{
+    text-decoration: none;
+}
+
+.anchors {
+    border-left: solid 1px #cdcdcd;
+    padding: 1rem;
+}
+.anchors ul{
+    list-style: none;
+}
+.anchors a{
+    text-decoration: none;
+}
+.footer{
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+section p{
+    margin-bottom: 1rem;
+}
+.nav-footer ul{
+    list-style: none;
+    display: flex;
+    gap:2rem ;
+    
+}
+.nav-footer a{
+text-decoration: none;
 }

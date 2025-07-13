@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,38 +8,176 @@
     <title>Página Principal</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-    <div>   
-        <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
-    </div>
+    <header class="header" role="banner" id="header">
+
+        <!-- Botão hambúrguer acessível -->
+        <button class="botao-hamburguer" aria-label="Abrir menu de navegação" aria-expanded="false"
+            aria-controls="menu-principal">
+            <span class="linha"></span>
+            <span class="linha"></span>
+            <span class="linha"></span>
+        </button>
+
+        <!-- Logo com link para a página inicial -->
+        <a href="#" class="logo" aria-label="Ir para a página inicial">
+            <figure>
+                <img src="assets/img/wikipedia-logo.svg" width="200" alt="Logo da Wikipédia">
+            </figure>
+        </a>
+
+        <!-- Barra de pesquisa acessível -->
+        <form class="formulario-pesquisa" role="search">
+            <label for="pesquisa" class="visualmente-oculto">Pesquisar na Wikipédia</label>
+            <div class="barra-pesquisa">
+                <span class="icone" aria-hidden="true">🔍</span>
+                <input type="search" id="pesquisa" name="search" placeholder="Pesquisar na Wikipédia" required>
+                <button type="submit"><strong>Pesquisar</strong></button>
+            </div>
+        </form>
+
+        <!-- Navegação auxiliar (ex: links de conta) -->
+        <nav class="navegacao-usuario" aria-label="Acesso do usuário">
+            <ul>
+                <li><a href="#">Donativos</a></li>
+                <li><a href="#">Criar uma conta</a></li>
+                <li><a href="#">Entrar</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
 
     <div class="bar"></div>
 
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
+    <main class="content">
+        <nav class="sidebar" aria-label="Seções de mangás">
+            <h2>Mangás</h2>
+            <br>
             <ul>
-                <li><a href="#">Links</a></li>
+                <li><a href="https://pt.wikipedia.org/wiki/Berserk_(mang%C3%A1)">Berserk</a></li><br>
+                <li><a href="https://pt.wikipedia.org/wiki/One_Piece">One Piece</a></li><br>
+                <li><a href="https://pt.wikipedia.org/wiki/Naruto">Naruto</a></li>                
             </ul>
-        </div>
+        </nav>
 
-        <div class="main">
+        <article class="main">
+            <br>
+            <h1 id="berserk">Berserk <i>(mangá)</i></h1>
+            <br>
+            <p>Berserk (ベルセルク, Beruseruku) é uma série de mangá escrita e ilustrada por Kentaro Miura. Situado em um mundo de fantasia sombria inspirado na Europa medieval, a história gira em torno de Guts, um solitário mercenário, e Griffith, o líder de um bando de mercenários chamado de "Bando do Falcão". Miura publicou um one-shot de Berserk em 1988. A série começou a ter os seus capítulos publicados no ano seguinte na agora extinta revista Monthly Animal House, que foi substituída em 1992 pela revista bimestral Young Animal, onde Berserk continua a ser serializado intermitentemente. Miura faleceu em maio de 2021, o capítulo final que ele escreveu e ilustrou foi publicado postumamente em setembro do mesmo ano; a série foi retomada em junho de 2022, sob a supervisão do colega e amigo de infância de Miura, Kouji Mori, e do grupo de assistentes e aprendizes de Miura do Studio Gaga.
+                Berserk foi adaptado em uma série de televisão de anime de 25 episódios pelo estúdio Oriental Light and Magic, que adaptou o arco Era de Ouro e foi exibido de 7 de outubro de 1997 a 31 de março de 1998. A Era de Ouro foi novamente adaptada em uma trilogia de filmes; os dois primeiros filmes estrearam em 2012 e o terceiro filme estreou em 2013. Uma segunda adaptação de anime para a televisão de 24 episódios foi transmitida por duas temporadas entre 2016 e 2017.
+                Em maio de 2021, o mangá de Berserk tinha mais de 50 milhões de cópias em circulação, incluindo versões digitais, tornando-se uma das séries de mangá mais vendidas de todos os tempos. O mangá recebeu o Prêmio de Excelência na sexta edição do Prêmio Cultural Osamu Tezuka em 2002. Berserk foi amplamente aclamado pela crítica, que se destacou pelo seu universo sombrio, qualidade nos desenvolvimento da narrativa e de personagens e, especialmente, pela arte detalhada dos desenhos de Miura.
+            </p>
+            <br>
+            <figure class="img-principal">
+                <img src="./assets/img/Berserk.webp" alt="foto de guts com a sua espada na mão">
+            </figure>
             
-        </div>
+            <br>
 
-        <div class="anchors">
+            <h2 id="enredo">Enredo</h2> 
+            <br>
+            <p>Guts é um guerreiro errante e antigo Comandante da Tropa de Assalto da renomada unidade mercenária conhecida como o Bando do Falcão. Ele, agora, caça criaturas demoníacas chamadas Apóstolos, humanos que fizeram um pacto com um grupo de arqui demônios conhecidos como "A Mão de Deus" que exige o sacrifício de qualquer coisa ou pessoa que for mais achegado a eles em troca de um poder sobrenatural incrível. O próprio Guts carrega uma Marca do Sacrifício vinda deste mesmo ritual; ele é uma das poucas pessoas que sobreviveram a esse ritual, mas, ainda assim, demônios são atraídos incessantemente até ele onde quer que vá, com a Marca se tornando mais dolorosa e sangrenta conforme a proximidade e o poder de seus adversários. Depois de uma briga de infância problemática no bando mercenário de seu pai adotivo, Guts é recrutado pelos Falcões por seu carismático líder Griffith. Entretanto, em sua ambição de se tornar governante, ele seduz a filha do rei, levando-o a ser aprisionado e torturado por um ano até ser resgatado por seus companheiros. Com seu corpo horrivelmente mutilado, tornando-o num aleijado mudo e imóvel, Griffith invoca a Mão de Deus e concorda em sacrificar os seus amigos, assim como seu grupo mercenário, num ritual demoníaco e continua com seu sonho de conquistar o mundo através de um renascimento, como membro da própria Mão de Deus; somente Guts e sua amada Caska escapam vivos. Depois de se separar de Caska, que perdeu a memória devido ao trauma do ritual, Guts começa a caçar os Apóstolos, buscando vingar-se de Griffith, reencontrando-se, mais tarde, com Caska bem a tempo de resgatá-la antes que fosse queimada como uma bruxa. Enquanto Guts e Caska viajam ao país élfico de Elfhelm, procurando um refúgio seguro, acompanhados por um novo grupo de companheiros com os quais fizeram amizade durante suas jornadas, um Griffith reencarnado cria um segundo Bando do Falcão e lidera a luta contra as forças invasoras do leste/oriente, terminando por estabelecer seu reinado sobre Midland e fundando um nova e massiva capital, Falconia, onde os humanos se refugiam dos ataques de demônios que não param de aumentar, sem saberem que seu próprio líder também é um demônio.  
+            </p>
+
+            <br>
+
+            <h2 id="arcos">Arcos de História</h2>
+            <br>
+            <h3 id="negro">O Espadachim Negro (Capítulos -16 ao -9)</h3>
+            <br>
+            <p>
+              Guts, conhecido como O Espadachim Negro, caça monstros em castelos dominados por criaturas abissais conhecidas como "apóstolos". Em uma de suas caçadas, Guts se depara com um artefato mágico em forma de um ovo com feições humanas conhecido como Behelit, artefato este capaz de abrir um portal dimensional e levá-lo até seu maior adversário, Femto.
+            </p>
+            
+            <br>
+
+            <h3 id="ouro">Era de Ouro (Capítulos -8 ao 94)</h3>
+            <br>
+            <p>
+              O arco começa na infância de Guts e avança, nos primeiros capítulos, até o primeiro contato com o Bando do Falcão liderado por Griffith. Guts, Griffith e Caska, lideram as tropas do Bando do Falcão para pôr fim em uma guerra centenária entre o Reino de Midland e o Império Tudor. Ao fim da guerra, após a queda da fortaleza de Doldrey, Griffith é condecorado com o título de Falcão Branco. Com acesso à nobreza e aristocracia, mas coloca tudo à perder ao decidir deitar-se com a princesa Charlotte para, finalmente, concretizar o sonho de se tornar rei. Ao ser flagrado por uma criada enquanto faz sexo com a princesa, Griffith é preso e torturado por um ano, até ser resgatado pelos remanescentes do bando, mas, neste mesmo dia um eclipse toma conta de Midland, e um portal dimensional se abre para buscar o líder do bando e coroa-lo como o quinto membro da Mão de Deus.
+            </p>
+
+            <br>
+
+            <h3 id="torra">Torra da Convicção (Capítulos 95 ao 176)</h3>
+            <br>
+            <p>
+              Após os acontecimentos da Era de Ouro, a história retorna ao presente acompanhando a jornada de Guts em busca dos apóstolos. Ao descansar em baixo de uma árvore, Guts observa um grupo de bandidos abusar de uma garota chamada Jill, ao confrontar os bandidos, a marca em seu pescoço começa sangrar e a árvore ganha vida, Guts luta até o amanhecer contra o demônio. Ao raiar do sol, Jill, Guts e o elfo Puck caminham até o vilarejo, chegando lá o Espadachim negro se depara com aldeões amedrontados por ataques de Elfos raptores de crianças. Após breves acontecimentos Guts conhece Serpico, membro d'Os Cavaleiros da Corrente de Ferro Sagrada. Ao viajar para Albion, Guts descobre que Caska desapareceu e prontamente passa investigar seu paradeiro e acaba em meio a uma batalha entre cultistas possuídos e Os Cavaleiros da Corrente de Ferro Sagrada.
+            </p>
+
+            <br>
+
+            <h3 id="falcao">Falcão Milenar (Capítulos 177 ao 307)</h3>
+            <br>
+            <p>
+              A história acompanha Guts e seus amigos encarando as consequências da transformação de Griffith no quinto membro da Mão de Deus, Femto. Ao longo do caminho Guts conhece uma bruxa chamada Schierke e descobre a armadura Berserker, tão poderosa que é capaz de ameaçar a sanidade de Guts. Ao mesmo tempo que Guts busca a armadura e enfrenta novas e poderosas ameaças, Femto trama inquietantes planos para realizar o seu novo sonho, fazer de todo o mundo seu próprio reino.
+            </p>
+
+            <br>
+
+            <h3 id="fantasia">Fantasia (capítulos 308 ao 373)</h3>
+            <br>
+            <p>
+              Guts e seu grupo zarpam em direção à Elfhelm, o reino dos elfos e criaturas mágicas, localizado na ilha Skellig no Mar Ocidental, em busca de ajuda do rei elfo para restaurar a sanidade de Caska.
+              Após diversas lutas em alto mar e conhecer Isma, uma garota sereia, o grupo chega à terra natal de Puck. A recepção, contudo, não é amigável, visto que os elfos habitantes da ilha são cautelosos. Após conquistarem a confiança dos habitantes locais, os protagonistas adentram na ilha e a exploram, Guts tenta consolidar seu objetivo quando decidiu ir à Elfhelm e também obtém revelações sobre a armadura Berseker e seu antigo usuário.
+              Enquanto isso, em Falconia, Griffith arquiteta seu plano de governo, explora a mística árvore espiral mundial e lida com o passado.
+            </p>
+
+            <br>
+
+            <h3 id="exilio">Exílio no oriente ( capítulos 374 - em andamento)</h3>
+            <br>
+            <p>
+              O destino da ilha é selado, Guts e seu grupo entram a bordo do Seahorse. Todavia, o navio é interceptado pelos Kushans, deixando todos aflitos sobre quais são as intenções do povo guerreiro oriental.
+            </p>          
+            
+
+            </article>
+
+        <nav class="anchors" aria-label="Navegação interna do artigo">
             <h2>Neste Artigo</h2>
+            <br>
             <ul>
-                <li><a href="#">Âncoras</a></li>
+                <li><a href="#berserk">Berserk</a></li>
+                <br>
+                <li><a href="#enredo">Enredo</a></li>
+                <br>
+                <li><a href="#arcos">Arcos de História</a></li>
+                <br>
+                <li><a href="#negro">O Espadachim Negro (Capítulos -16 ao -9)</a></li>
+                <br>
+                <li><a href="#ouro">Era de Ouro (Capítulos -8 ao 94)</a></li>
+                <br>
+                <li><a href="#torra">Torra da Convicção (Capítulos 95 ao 176)</a></li>
+                <br>
+                <li><a href="#falcao">Falcão Milenar (Capítulos 177 ao 307)</a></li>
+                <br>
+                <li><a href="#fantasia">Fantasia (capítulos 308 ao 373)</a></li>
+                <br>
+                <li><a href="#exilio">Exílio no oriente ( capítulos 374 - em andamento)</a></li>
+
             </ul>
-        </div>
-    </div>
-
-    <div class="footer">
-
-    </div>
+        </nav>
+    </main>
+    <br>
+    <footer class="footer">
+        <section>
+        <p>Esta página foi editada pela última vez às 13h00min de 13 de julho de 2025.</p><br>
+        <p>Este texto é disponibilizado nos termos da licença <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.pt">Atribuição-CompartilhaIgual 4.0 Internacional (CC BY-SA 4.0) da Creative Commons;</a>pode estar sujeito a condições adicionais. Para mais detalhes, consulte as condições de utilização.</p>
+        </section>
+        <nav class="nav-footer" aria-label="rodapé">
+         <ul>
+            <li><a href="#">privacidade</a></li>
+            <li><a href="#">sobre a winkipédia</a></li>
+            <li><a href="#">avisos gerais</a></li>
+         </ul>
+        </nav>
+    </footer>
 </body>
+
 </html>
