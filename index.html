@@ -4,41 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Game of Thrones – Wikipédia Melhorada</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-    <div>   
+    <header>
         <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
+            <a href="#" aria-label="Página inicial">
+                <img src="assets/images/logo.png" width="200" alt="Logo do site"/>
+            </a>
         </div>
-    </div>
-
-    <div class="bar"></div>
-
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
+        <nav class="bar" aria-label="Navegação principal">
             <ul>
-                <li><a href="#">Links</a></li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Artigos</a></li>
+                <li><a href="#">Sobre</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <div class="main">
-            
-        </div>
+    <main class="content">
+        <aside class="sidebar" aria-label="Menu lateral">
+            <h2>Conteúdo</h2>
+            <ul>
+                <li><a href="#sinopse">Sinopse</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
+            </ul>
+        </aside>
 
-        <div class="anchors">
+        <article class="main">
+            <header>
+                <h1>Game of Thrones</h1>
+            </header>
+            <figure>
+                <img src="assets/images/game-of-thrones.png" alt="Imagem promocional de Game of Thrones" width="400">
+                <figcaption>Imagem promocional da série Game of Thrones</figcaption>
+            </figure>
+            <section id="sinopse">
+                <h2>Sinopse</h2>
+                <p>
+                    <strong>Game of Thrones</strong> é uma série de televisão baseada nos livros de George R. R. Martin. A trama gira em torno da disputa pelo Trono de Ferro no continente fictício de Westeros, envolvendo diversas famílias nobres, intrigas políticas e elementos fantásticos.
+                </p>
+            </section>
+            <section id="personagens">
+                <h2>Principais Personagens</h2>
+                <ul>
+                    <li>Jon Snow</li>
+                    <li>Daenerys Targaryen</li>
+                    <li>Tyrion Lannister</li>
+                    <li>Cersei Lannister</li>
+                    <li>Arya Stark</li>
+                </ul>
+            </section>
+            <section id="curiosidades">
+                <h2>Curiosidades</h2>
+                <p>
+                    A série foi exibida entre 2011 e 2019, tornando-se um fenômeno mundial. Recebeu dezenas de prêmios e é conhecida por suas reviravoltas e personagens complexos.
+                </p>
+            </section>
+        </article>
+
+        <nav class="anchors" aria-label="Navegação do artigo">
             <h2>Neste Artigo</h2>
             <ul>
-                <li><a href="#">Âncoras</a></li>
+                <li><a href="#sinopse">Sinopse</a></li>
+                <li><a href="#personagens">Principais Personagens</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
             </ul>
-        </div>
-    </div>
+        </nav>
+    </main>
 
-    <div class="footer">
-
-    </div>
+    <footer class="footer" aria-label="Rodapé">
+        <p>&copy; 2025 - Projeto Trilha HTML. Inspirado na Wikipedia.</p>
+    </footer>
 </body>
 </html>
