@@ -5,6 +5,23 @@ body, html {
 }
 ul { list-style: none; padding-left: 5px; }
 a { color:blue; text-decoration: none;}
+table {
+    border-collapse: collapse; /* Remove os espaços entre as bordas */
+    width: 100%; /* Ajuste para a largura desejada */
+}
+
+th, td {
+    border: 1px solid black; /* Borda sólida preta */
+    padding: 8px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+}
+
+th {
+    background-color: #f2f2f2; /* Cor de fundo para cabeçalhos */
+}
+.game-modes {
+    list-style: disc;
+}
 .bar {
     background-color: #f9f9fb;
     padding:15px;
