@@ -36,3 +36,36 @@ a { color:blue; text-decoration: none;}
 figure {
     text-align: center;
 }
+p{
+    text-indent: 30px;
+    text-align: justify;
+}
+table{
+    margin:auto;
+    border-collapse: collapse;
+    width: 60%;
+
+}
+th, td{
+    border: 1px solid black;
+    text-align: center;
+
+}
+tbody tr:hover{
+     background: rgb(215, 223, 231);
+     cursor: pointer;
+}
+thead{
+    background: gray;
+}
+cite{
+    text-align: right;
+}
+blockquote{
+    background-color: rgba(123, 130, 130, 0.313);
+    text-align: justify;
+}
+figcaption{
+    font-size: 80%;
+    font-style: italic;
+}
