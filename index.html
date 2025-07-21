@@ -1,44 +1,247 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML - Wikipedia</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="assets/images/logo.png"
+          width="200"
+          alt="Wikipedia - A enciclopédia livre"
+        />
+      </div>
+      <h1>Wikipedia</h1>
+      <p>A enciclopédia livre</p>
+    </header>
 
-    <div>   
-        <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
-    </div>
+    <!-- Informações sobre o projeto/desafio -->
+    <aside class="project-info" aria-label="Informações do projeto">
+      <details>
+        <summary>Sobre este projeto</summary>
+        <section>
+          <h2>Recriando Wikipedia, com um layout melhor :)</h2>
 
-    <div class="bar"></div>
+          <h3>Objetivo</h3>
+          <p>
+            Este desafio consiste em treinar você com relação a estrutura do
+            site, e também aplicar conhecimentos adquiridos sobre semântica e
+            acessibilidade.
+          </p>
 
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
+          <h3>Desafio</h3>
+          <p>
+            Neste repositório tem uma estrutura básica já pré-montada de um
+            layout simples com um pouco de CSS aplicado. Apenas para deixar mais
+            apresentável.
+          </p>
+          <p>
+            Fiquem à vontade para criar da forma que desejarem, e sobre os temas
+            que quiserem. O intuito aqui é divertir, e ao mesmo tempo aprender
+            com o desafio.
+          </p>
+
+          <h3>Links úteis</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.nvaccess.org/download/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Download do NVDA</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://pt.wikipedia.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Wikipedia</a
+              >
+            </li>
+          </ul>
+        </section>
+      </details>
+    </aside>
+
+    <main>
+      <div class="bar"></div>
+
+      <div class="content">
+        <aside class="sidebar" aria-label="Menu de navegação">
+          <h2>Menu</h2>
+          <nav>
             <ul>
-                <li><a href="#">Links</a></li>
+              <li><a href="#historia">História</a></li>
+              <li><a href="#caracteristicas">Características</a></li>
+              <li><a href="#importancia">Importância</a></li>
             </ul>
-        </div>
+          </nav>
+        </aside>
 
-        <div class="main">
-            
-        </div>
+        <article class="main">
+          <h2>HTML (Linguagem de Marcação de Hipertexto)</h2>
 
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
+          <p>
+            HTML (<abbr title="HyperText Markup Language"
+              >Linguagem de Marcação de Hipertexto</abbr
+            >) é a linguagem padrão usada para criar e estruturar páginas na
+            web.
+          </p>
+
+          <p>
+            Ela define a estrutura do conteúdo, utilizando tags para textos,
+            imagens, links, vídeos, entre outros elementos que compõem uma
+            página web.
+          </p>
+
+          <section id="historia">
+            <h3>História</h3>
+            <p>
+              O HTML foi criado por Tim Berners-Lee em 1991. Desde então, passou
+              por várias atualizações, sendo a mais recente o HTML5, que trouxe
+              novos recursos para multimídia, acessibilidade e semântica.
+            </p>
+          </section>
+
+          <section id="caracteristicas">
+            <h3>Características</h3>
             <ul>
-                <li><a href="#">Âncoras</a></li>
+              <li>
+                Utiliza tags delimitadas por &lt; &gt; para estruturar
+                conteúdos.
+              </li>
+              <li>É interpretado por navegadores para exibir as páginas.</li>
+              <li>Suporta multimídia, scripts e estilos.</li>
+              <li>É uma linguagem de marcação, não de programação.</li>
             </ul>
-        </div>
-    </div>
+          </section>
 
-    <div class="footer">
+          <section id="importancia">
+            <h3>Importância</h3>
+            <p>
+              O HTML é essencial para a construção da web, funcionando como o
+              esqueleto das páginas que navegamos diariamente.
+            </p>
 
-    </div>
-</body>
+            <p>
+              Além disso, seu uso correto melhora a acessibilidade, SEO e a
+              experiência do usuário.
+            </p>
+
+            <p>
+              Para mais detalhes, veja a
+              <a
+                href="https://pt.wikipedia.org/wiki/HTML"
+                target="_blank"
+                rel="noopener noreferrer"
+                >página do HTML na Wikipedia</a
+              >.
+            </p>
+          </section>
+        </article>
+
+        <nav class="anchors" aria-label="Neste Artigo">
+          <h2>Neste Artigo</h2>
+          <ul>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#importancia">Importância</a></li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+
+    <footer>
+      <nav aria-label="Links da Wikipedia">
+        <section>
+          <h3>Sobre a Wikipédia</h3>
+          <ul>
+            <li>
+              <a
+                href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal"
+                >Página principal</a
+              >
+            </li>
+            <li>
+              <a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Contato"
+                >Contato</a
+              >
+            </li>
+            <li>
+              <a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Sobre"
+                >Sobre a Wikipédia</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Comunidade</h3>
+          <ul>
+            <li>
+              <a
+                href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Portal_da_comunidade"
+                >Portal da comunidade</a
+              >
+            </li>
+            <li>
+              <a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Eventos"
+                >Eventos</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Pol%C3%ADtica"
+                >Políticas</a
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Ferramentas</h3>
+          <ul>
+            <li>
+              <a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Ajuda"
+                >Ajuda</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Doa%C3%A7%C3%B5es"
+                >Doações</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Termos_de_uso"
+                >Termos de uso</a
+              >
+            </li>
+          </ul>
+        </section>
+      </nav>
+
+      <section class="copyright">
+        <small>
+          Conteúdo disponível sob
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.pt"
+            >Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não
+            Adaptada</a
+          >
+          e pode conter termos adicionais. Veja as
+          <a href="https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Termos_de_uso"
+            >condições de uso</a
+          >
+          para detalhes.
+        </small>
+      </section>
+    </footer>
+  </body>
 </html>

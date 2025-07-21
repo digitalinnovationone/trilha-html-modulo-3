@@ -1,38 +1,132 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+
+/* Header styles */
+header {
+  border-bottom: 1px solid #a2a9b1;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+  color: #54595d;
+  font-style: italic;
+}
+
+/* Project info styles */
+.project-info {
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  margin: 1rem;
+  border-radius: 3px;
+}
+
+.project-info details {
+  padding: 1rem;
+}
+
+.project-info summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5rem;
+  background-color: #eaecf0;
+  border-radius: 3px;
+  margin: -1rem -1rem 1rem -1rem;
+}
+
+.project-info summary:hover {
+  background-color: #ddd;
+}
+
+ul {
+  list-style: none;
+  padding-left: 5px;
+}
+a {
+  color: blue;
+  text-decoration: none;
+}
+
 .bar {
-    background-color: #f9f9fb;
-    padding:15px;
-    border-top: solid 1px #cdcdcd;
-    border-bottom: solid 1px #cdcdcd;
+  background-color: #f9f9fb;
+  padding: 15px;
+  border-top: solid 1px #cdcdcd;
+  border-bottom: solid 1px #cdcdcd;
 }
+
 .content {
-    max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
-    display: grid;
-    gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+  max-width: 1440px;
+  margin: auto;
+  grid-gap: 3rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-areas: 'sidebar main anchors';
+  grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.footer {
-    min-height: 100px;
-    border-top: solid 1px #cdcdcd;
+
+.main {
+  grid-area: main;
 }
-.anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
-}
+
 .sidebar {
-    border-right: solid 1px #cdcdcd;
+  grid-area: sidebar;
+  border-right: solid 1px #cdcdcd;
 }
+
+.anchors {
+  grid-area: anchors;
+  border-left: solid 1px #cdcdcd;
+  padding-left: 15px;
+}
+
+/* Footer styles */
+footer {
+  min-height: 100px;
+  border-top: solid 1px #cdcdcd;
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+footer nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+footer h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 0.25rem;
+}
+
+.copyright {
+  border-top: 1px solid #a2a9b1;
+  padding-top: 1rem;
+  text-align: center;
+}
+
 figure {
-    text-align: center;
+  text-align: center;
 }
