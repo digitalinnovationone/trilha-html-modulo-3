@@ -1,38 +1,312 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
-.bar {
-    background-color: #f9f9fb;
-    padding:15px;
-    border-top: solid 1px #cdcdcd;
-    border-bottom: solid 1px #cdcdcd;
-}
-.content {
-    max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
-    display: grid;
-    gap: 3rem;
-    grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-.footer {
-    min-height: 100px;
-    border-top: solid 1px #cdcdcd;
-}
-.anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
-}
-.sidebar {
-    border-right: solid 1px #cdcdcd;
-}
-figure {
+.container-logo{ /*-------------------------------------------header-----------------------------------------------*/
     text-align: center;
+}
+.logo-wikipedia{
+    width: 200px;
+}
+.titulo-logo{
+    font-family: grenze gotisch;   
+}
+main{ /*-------------------------------------------main-----------------------------------------------------------*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+.container-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.container-links{
+    padding: 20px;
+}
+.container-conteudo-inicio{
+    display: flex;  
+}
+.imagem-container-conteudo{
+    width: 180px;
+    padding-top: 100px;
+}
+.container-conteudo-elenco{
+    display: inline-block;  
+}
+.container-personagens{
+    display: flex;
+    flex-wrap: wrap;
+}
+.titulo-inicio{
+    padding-left: 10px;
+}
+.paragrafo-inicio{
+    font-family:'Times New Roman', Times, serif;
+    width: 700px;
+    padding-left: 10px;
+}
+.titulo-elenco-principais{
+    width: 100px;
+}
+.titulo-elenco{
+    padding-left: 10px;
+}    
+.titulo-elenco-principais{
+    padding-left: 10px;
+}  
+.titulo-elenco-coadjuvantes{
+    padding-left: 10px;
+}
+.titulo-producao{
+    padding-left: 10px;
+}
+.titulo-desenvolvimento{
+    padding-left: 10px;
+}
+.paragrafo-desenvolvimento{
+    font-family:'Times New Roman', Times, serif;
+    width: 700px;
+    padding-left: 10px;
+}
+.titulo-filmagem{
+    padding-left: 10px;
+}
+.paragrafo-filmagem{
+    font-family:'Times New Roman', Times, serif;
+    width: 700px;
+    padding-left: 10px;
+}
+.titulo-efeitos{
+    padding-left: 10px;
+}
+.paragrafo-efeitos-visuais{
+    font-family:'Times New Roman', Times, serif;
+    width: 700px;
+    padding-left: 10px;
+}
+.container-video-iframe{
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.ancora-paragrafo-inicio{
+    text-decoration: none;
+}
+.item-lista-elenco{
+    width: 700px;
+    font-family:'Times New Roman', Times, serif;
+}
+.ancora-elenco{
+    text-decoration: none;
+}
+.figcaption-container-conteudo{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.figure-personagem-principal{
+    margin-top: 10px;
+}
+.ancora-link-1{
+    text-decoration: none;
+    color: black;
+}
+.lista-nav{
+    list-style-type: none;
+}
+.item-lista-nav{
+    padding-top: 10px;
+}
+.ancora-item-lista-nav{
+    text-decoration: none;
+    color: black;
+} /*-------------------------------------------personagens-main---------------------------------------------*/
+.imagem-arisu-container-conteudo{
+    width: 85px;
+    border: solid 1px black;
+}
+.imagem-usagi-container-conteudo{
+    width: 114px;
+    border: solid 1px black;
+}
+.imagem-chota-container-conteudo{
+    width: 100px;
+    border: solid 1px black;
+}
+.imagem-karube-container-conteudo{
+    width: 100px;
+    border: solid 1px black;
+}
+.imagem-chishiya-container-conteudo{
+    width: 100px;
+    border: solid 1px black;
+}
+.imagem-aguni-container-conteudo{
+    width: 85px;
+    border: solid 1px black;
+}
+.imagem-ann-container-conteudo{
+    width: 81px;
+    border: solid 1px black;
+}
+.imagem-niragi-container-conteudo{
+    width: 85.5px;
+    border: solid 1px black;
+}
+.imagem-kuina-container-conteudo{
+    width: 90px;
+    border: solid 1px black;
+}
+.imagem-samura-container-conteudo{
+    width: 91px;
+    border: solid 1px black;
+}
+.imagem-takeru-container-conteudo{
+    width: 105px;
+    border: solid 1px black;
+}
+.imagem-mira-container-conteudo{
+    width: 92px;
+    border: solid 1px black;
+}
+.imagem-shibuki-container-conteudo{
+    width: 100px;
+    border: solid 1px black;
+}
+.imagem-tatta-container-conteudo{
+    width: 103px;
+    border: solid 1px black;
+}
+.imagem-asahi-container-conteudo{
+    width: 90px;
+    border: solid 1px black;
+}
+.imagem-momoka-container-conteudo{
+    width: 90px;
+    border: solid 1px black;
+}
+.imagem-kuzuryu-container-conteudo{
+    width: 105px;
+    border: solid 1px black;
+}
+.container-footer{ /*-------------------------------------------footer---------------------------------------------*/
+    display: flex;
+    justify-content: space-around;
+}
+.container-1-footer{
+    padding: 30px;
+}
+.container-2-footer{
+    font-family: grenze gotisch;
+}
+.container-3-footer{
+    padding: 30px;
+}
+.logo-rodape-wikimedia{
+    width: 100px;
+}
+
+.logo-rodape-powered{
+    width: 100px;
+}
+
+@media (max-width: 1100px){
+  .container-main{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .paragrafo-inicio{
+    padding-left: 10px;
+  }
+  .titulo-inicio{
+    padding-left: 10px;
+  }
+  .ancora-item-lista-nav{
+    padding: 5px;
+  }
+}
+
+@media (max-width: 1284px){
+    .container-conteudo-inicio{
+        display: inline-block;
+    }
+}
+
+@media (max-width: 1241px){
+    .container-conteudo-imagem{
+        text-align: center;
+    }
+    .container-conteudo-elenco{
+        display: inline-block;
+    }
+    .figure-personagem-principal{
+    margin-top: 0;
+    }
+    .figure-personagem-coadjuvante{
+    margin-top: 0;
+    }
+    .container-producao{
+        display: inline-block;
+    }
+}
+
+@media (max-width: 790px){
+    .paragrafo-inicio{
+        width: 400px;
+    }
+    .item-lista-elenco{
+        width: 400px;
+    }
+    .paragrafo-desenvolvimento{
+        width: 400px
+    }
+    .paragrafo-filmagem{
+        width: 400px;
+    }
+    .paragrafo-efeitos-visuais{
+        width: 400px;
+    }
+}
+
+
+@media (max-width: 493px){
+    .iframe{
+        width: 320px;
+    }
+    .container-video-iframe{
+        padding: 0;
+    }
+    .container-personagens{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .paragrafo-inicio{
+        width: 300px;
+    }
+    .item-lista-elenco{
+        width: 270px;
+    }
+    .paragrafo-desenvolvimento{
+        width: 300px
+    }
+    .paragrafo-filmagem{
+        width: 300px;
+    }
+    .paragrafo-efeitos-visuais{
+        width: 300px;
+    }
+    
+}
+
+@media (max-width: 443px){
+    .titulo-rodape{
+        font-size: 20px;
+    }
+    .paragrafo-rodape{
+        font-size: 10px;
+    }
+    .logo-rodape-wikimedia{
+        width: 90px;
+    }
+    .logo-rodape-powered{
+        width: 90px;
+    }   
+    .container-footer{
+        display: flex;
+    }  
 }
