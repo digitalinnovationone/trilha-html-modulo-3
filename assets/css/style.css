@@ -5,13 +5,13 @@ body, html {
 }
 ul { list-style: none; padding-left: 5px; }
 a { color:blue; text-decoration: none;}
-.bar {
+.bar{
     background-color: #f9f9fb;
     padding:15px;
     border-top: solid 1px #cdcdcd;
     border-bottom: solid 1px #cdcdcd;
 }
-.content {
+main{
     max-width: 1440px;
     margin: auto;
     grid-gap: 3rem;
@@ -22,17 +22,24 @@ a { color:blue; text-decoration: none;}
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.footer {
+footer{
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
+    text-align: center;
+    list-style: none;
 }
-.anchors {
+article{
     border-left: solid 1px #cdcdcd;
     padding-left: 15px;
 }
-.sidebar {
+nav{
     border-right: solid 1px #cdcdcd;
 }
 figure {
     text-align: center;
+}
+
+article h1,
+article h2 {
+  text-align: center;
 }

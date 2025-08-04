@@ -1,19 +1,31 @@
-# Módulo 3 - Trilha HTML
+# 🕸️ Spider-Verso: Página Estilo Wikipédia
 
-**Título:** Recriando Wikipedia, com um layout melhor :)
+Este projeto é uma página web inspirada no estilo da Wikipédia com foco no universo do filme **Homem-Aranha: Através do Aranhaverso**. A proposta é praticar HTML5 semântico, CSS Grid e estrutura de conteúdo com acessibilidade e organização.
 
-## Objetivo
-Este desafio consiste em treinar você com relação a estrutura do site, e também aplicar conhecimentos adiquiridos sobre semântica e acessibilidade.
+---
 
-## Desafio
-Neste repositório tem uma estrutura básica já pré-montada de um layout simples com um pouco de CSS aplicado. Apenas para deixar mais apresentável.
+## 📚 Conteúdo da Página
 
-Fiquem a vontade para criar da forma que desejarem, e sobre os temas que quiserem. O intuito aqui é divertir, e ao mesmo tempo aprender com o desafio.
+- Informações detalhadas sobre o filme **Homem-Aranha: Através do Aranhaverso**
+- Biografia do personagem **Miles Morales**
+- Navegação lateral com outros filmes animados
+- Links externos para aprender mais sobre o personagem
+- Uso de imagens com `figure` e `figcaption`
+- Estrutura de layout com `grid-template-areas`
 
-Sigam as intruções da chamada do vídeo. Acredito que por lá, ficará mais fácil de entenderem como proceder.
+---
 
-## Links úteis
-- [Download do NVDA](https://www.nvaccess.org/download/)
-- [Wikipedia](https://pt.wikipedia.org/)
+## 🛠️ Tecnologias Utilizadas
 
+- HTML5
+- CSS3 (Grid Layout)
+- Semântica Web
+- Responsividade básica (em progresso)
 
+---
+
+## 🎯 Objetivos do Projeto
+
+- Praticar estruturação semântica com `article`, `section`, `nav`, `footer`, `figure`
+- Treinar organização de layout com **CSS Grid**
+- Aprender boas práticas com `git clone`, `branch`, `commit` e `push`
