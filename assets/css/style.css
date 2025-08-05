@@ -1,38 +1,251 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Linux Libertine', 'Georgia', 'Times', serif;
+    line-height: 1.6;
+    color: #202122;
+    background-color: #f6f6f6;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+
+* {
+    box-sizing: border-box;
+}
+
+ul { 
+    list-style: none; 
+    padding-left: 0; 
+    margin: 0;
+}
+
+a { 
+    color: #36c; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #447ff5;
+    text-decoration: underline;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #a2a9b1;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
 .bar {
-    background-color: #f9f9fb;
-    padding:15px;
-    border-top: solid 1px #cdcdcd;
-    border-bottom: solid 1px #cdcdcd;
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #a2a9b1;
 }
+
+.bar ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.bar li {
+    margin: 0;
+}
+
 .content {
     max-width: 1440px;
-    margin: auto;
-    grid-gap: 3rem;
+    margin: 2rem auto;
     display: grid;
-    gap: 3rem;
     grid-template-areas: "sidebar main anchors";
-    grid-template-columns: minmax(0,15rem) minmax(0,2.5fr) minmax(0,15rem);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 2rem;
+    padding: 0 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
-.footer {
-    min-height: 100px;
-    border-top: solid 1px #cdcdcd;
-}
-.anchors {
-    border-left: solid 1px #cdcdcd;
-    padding-left: 15px;
-}
+
 .sidebar {
-    border-right: solid 1px #cdcdcd;
+    grid-area: sidebar;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-right: 1px solid #eaecf0;
 }
+
+.sidebar h2 {
+    color: #54595d;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+    color: #36c;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.main {
+    grid-area: main;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.main h1 {
+    color: #000;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 0.5rem;
+}
+
+.main h2 {
+    color: #000;
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 0.25rem;
+}
+
+.main h3 {
+    color: #54595d;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+.main p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.main ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+.main li {
+    margin-bottom: 0.5rem;
+    list-style-type: disc;
+}
+
 figure {
     text-align: center;
+    margin: 2rem 0;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #54595d;
+    font-style: italic;
+}
+
+.anchors {
+    grid-area: anchors;
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-left: 1px solid #eaecf0;
+}
+
+.anchors h2 {
+    color: #54595d;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 0.5rem;
+}
+
+.anchors ul {
+    list-style: none;
+    padding: 0;
+}
+
+.anchors li {
+    margin-bottom: 0.5rem;
+}
+
+.anchors a {
+    color: #36c;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #a2a9b1;
+    padding: 1rem 2rem;
+    text-align: center;
+    color: #54595d;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 1200px) {
+    .content {
+        grid-template-columns: 200px 1fr 200px;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-areas: 
+            "main"
+            "sidebar"
+            "anchors";
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem;
+    }
+    
+    .sidebar, .anchors {
+        border: none;
+        border-top: 1px solid #eaecf0;
+    }
+    
+    .bar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .main {
+        padding: 1rem;
+    }
+    
+    .main h1 {
+        font-size: 2rem;
+    }
 }
