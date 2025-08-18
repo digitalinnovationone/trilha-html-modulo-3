@@ -1,10 +1,37 @@
 body, html {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ul { list-style: none; padding-left: 5px; }
 a { color:blue; text-decoration: none;}
+
+header {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9fb;
+    padding: 15px;
+    border-bottom: solid 1px #cdcdcd;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header div {
+    margin: 0 15px;
+}
+
+.logo img, .contra-barra img {
+    border-radius: 10%;
+}
+
 .bar {
     background-color: #f9f9fb;
     padding:15px;
@@ -22,10 +49,32 @@ a { color:blue; text-decoration: none;}
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.footer {
+
+h2, footer div p {
+    margin-right: 25px;
+    display: inline-block;
+}
+
+footer {
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
 }
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer ul li img{
+    height: 100px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8rem;
+}
+
 .anchors {
     border-left: solid 1px #cdcdcd;
     padding-left: 15px;
