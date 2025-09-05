@@ -3,8 +3,14 @@ body, html {
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+ul { 
+    list-style: none;
+    padding-left: 5px; 
+}
+a {
+    color:blue;
+    text-decoration: none;
+}
 .bar {
     background-color: #f9f9fb;
     padding:15px;
@@ -22,7 +28,34 @@ a { color:blue; text-decoration: none;}
     padding-left: 1rem;
     padding-right: 1rem;
 }
-.footer {
+article h1 { 
+    font-size: 40px;
+    text-align: center;
+}
+figure { 
+    text-align: center; 
+}
+article ul {
+    list-style: disc;
+    padding-left: 30px; 
+}
+table {
+    background-color: #f7f7f7;
+    border-collapse: collapse;
+    text-align: center;
+}
+th, td {
+    border: 1px solid #7e7e7e;
+    padding: 10px;
+}
+th {
+    background-color: #dbdbdb;
+}
+td:first-child {
+   background-color: #eeeeee;
+   font-weight: bold;
+}
+footer {
     min-height: 100px;
     border-top: solid 1px #cdcdcd;
 }
@@ -32,7 +65,4 @@ a { color:blue; text-decoration: none;}
 }
 .sidebar {
     border-right: solid 1px #cdcdcd;
-}
-figure {
-    text-align: center;
 }
