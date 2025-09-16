@@ -1,13 +1,26 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Russo One", sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'Russo One', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #111;
+}
+
+
 ul { list-style: none; padding-left: 5px; }
-a { color:blue; text-decoration: none;}
+a { color: blue; text-decoration: none; }
 .bar {
     background-color: #f9f9fb;
-    padding:15px;
+    padding: 15px;
     border-top: solid 1px #cdcdcd;
     border-bottom: solid 1px #cdcdcd;
 }
