@@ -12,6 +12,10 @@ Fiquem a vontade para criar da forma que desejarem, e sobre os temas que quisere
 
 Sigam as intruções da chamada do vídeo. Acredito que por lá, ficará mais fácil de entenderem como proceder.
 
+### 🌐 Meu projeto online
+Veja meu **Projeto** publicado com GitHub Pages:  
+👉 [Acesse aqui](https://robsonbenigno.github.io/trilha-html-modulo-3/)
+
 ## Links úteis
 - [Download do NVDA](https://www.nvaccess.org/download/)
 - [Wikipedia](https://pt.wikipedia.org/)

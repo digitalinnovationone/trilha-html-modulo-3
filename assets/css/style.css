@@ -35,4 +35,88 @@ a { color:blue; text-decoration: none;}
 }
 figure {
     text-align: center;
+    
 }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Fundo */
+    background-image: url('../images/fundo\ 1.jpg'); /* caminho relativo da página index.html */
+    background-size: cover;       /* a imagem cobre toda a tela */
+    background-position: center;  /* centraliza a imagem */
+    background-repeat: no-repeat; /* evita repetição */
+    background-attachment: fixed; /* fixa a imagem ao rolar a página */
+}
+.main {
+    background-color: rgba(255, 254, 254, 0.705); /* fundo branco semi-transparente */
+    padding: 30px; /* espaço interno */
+    border-radius: 20px; /* cantos arredondados (opcional) */
+    max-width: 750px; /* largura máxima */
+    margin: 20px auto; /* centraliza horizontalmente */
+}
+.mainindex {
+    background-color: #f9f9fb6b;
+    padding: 20px; /* espaço interno */
+    border-radius: 20px; /* cantos arredondados (opcional) */
+    max-width: 750px; /* largura máxima */
+    height: 80vh; /* altura igual à da tela */
+    margin: 5px auto; /* centraliza horizontalmente */
+}
+
+img {
+    border-radius: 20px; /* Ajuste o valor para mais ou menos arredondamento */
+}
+
+.footer {
+  background-color: #f9f9fb6b; /* fundo escuro */
+  color: #0c0000;            /* texto branco */
+  text-align: center;     /* centraliza o texto */
+  padding: 1px;
+  margin-top: 1px;
+  border-radius:90px 90px 0 0; /* cantos arredondados em cima */
+}
+
+
+/* Container da nota IMDb */
+.imdb-rating {
+    display: inline-block;
+    background-color: #f5c518; /* cor amarela do IMDb */
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 15px 0 15px 0;
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+/* Texto "IMDb" em destaque */
+.imdb-rating span {
+    font-weight: normal;
+    margin-left: 5px;
+    color: #000;
+}
+
+/* Pequeno efeito ao passar o mouse */
+.imdb-rating:hover {
+    background-color: #e5b507;
+    cursor: default;
+}
+
+figcaption {
+    font-size: 12px;  /* diminui o tamanho */
+    color: #555;      /* deixa o texto mais suave */
+    text-align: center; /* centraliza o texto */
+    font-style: italic; /* deixa em itálico */
+}
+
+figure img {
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+
