@@ -1,44 +1,328 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Supernatural - Wiki Acessível</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #111;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Controle de alto contraste via classe (ativa por botão) */
+        .high-contrast {
+            background-color: #000;
+            color: #ff0;
+        }
+
+        .high-contrast a {
+            color: #0ff;
+        }
+
+        .high-contrast button,
+        .high-contrast .btn-contrast {
+            background-color: #ff0;
+            color: #000;
+            border: 1px solid #fff;
+        }
+
+        /* Botão de acessibilidade fixo */
+        .accessibility-toolbar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-contrast {
+            background-color: #1e2a3a;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: 0.2s;
+        }
+
+        .btn-contrast:hover {
+            background-color: #0f1a24;
+        }
+
+        /* Layout principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .high-contrast .container {
+            background: #000;
+            border: 1px solid #ff0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0b2b26, #1e3c3a);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        nav {
+            background: #2c4a3e;
+            padding: 0.8rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            background: #f4a261;
+            color: #1e2a2a;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        article {
+            flex: 3;
+            min-width: 250px;
+        }
+
+        aside {
+            flex: 1;
+            background: #f9f5eb;
+            padding: 1.5rem;
+            border-radius: 16px;
+            border-left: 6px solid #b5651e;
+        }
+
+        .high-contrast aside {
+            background: #222;
+            border-left-color: #ff0;
+        }
+
+        h1, h2, h3 {
+            margin-top: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+
+        .personagens {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .card {
+            background: #e8e2d4;
+            padding: 1rem;
+            border-radius: 16px;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .high-contrast .card {
+            background: #333;
+            border: 1px solid #ff0;
+        }
+
+        footer {
+            background: #1e2a2a;
+            color: #ccc;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #f4a261;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+            .accessibility-toolbar {
+                bottom: 10px;
+                right: 10px;
+            }
+            .btn-contrast {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
-    <div>   
-        <div class="logo">
-            <img src="assets/images/logo.png" width="200"/>
-        </div>
+    <div class="container">
+        <header role="banner">
+            <h1>Supernatural</h1>
+            <p>Caçadores de monstros, lendas urbanas e muito rock & roll</p>
+        </header>
+
+        <nav role="navigation" aria-label="Menu principal">
+            <a href="#sinopse">Sinopse</a>
+            <a href="#personagens">Personagens</a>
+            <a href="#temporadas">Temporadas</a>
+            <a href="#curiosidades">Curiosidades</a>
+        </nav>
+
+        <main id="main-content" role="main">
+            <article>
+                <section id="sinopse">
+                    <h2>📺 Sinopse</h2>
+                    <p><strong>Supernatural</strong> é uma série de televisão americana criada por Eric Kripke. A trama acompanha os irmãos <strong>Sam e Dean Winchester</strong>, que viajam pelos Estados Unidos caçando criaturas sobrenaturais, fantasmas, demônios e outras entidades malignas. A série mistura horror, drama e humor, abordando também temas como família, destino e livre arbítrio.</p>
+                    <p>A série estreou em 2005 e terminou em 2020, totalizando <strong>15 temporadas</strong> e 327 episódios, sendo uma das séries de fantasia mais longas da TV americana.</p>
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/3/34/Supernatural_S15_poster.jpg/250px-Supernatural_S15_poster.jpg" alt="Pôster da 15ª temporada de Supernatural com os personagens Sam e Dean Winchester" loading="lazy">
+                        <figcaption>Pôster da última temporada (15ª) - Sam e Dean Winchester</figcaption>
+                    </figure>
+                </section>
+
+                <section id="personagens">
+                    <h2>👥 Personagens principais</h2>
+                    <div class="personagens">
+                        <div class="card">
+                            <h3>Dean Winchester</h3>
+                            <p>Interpretado por Jensen Ackles. Caçador experiente, amante de carros clássicos (Impala 67) e música rock. Protetor nato.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Sam Winchester</h3>
+                            <p>Interpretado por Jared Padalecki. Mais estudioso, possui habilidades psíquicas por causa do sangue de demônio.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Castiel</h3>
+                            <p>Anjo que se torna aliado dos Winchester, interpretado por Misha Collins. Traz conflitos entre céu e terra.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Bobby Singer</h3>
+                            <p>Caçador veterano e figura paterna para os irmãos. Referência em conhecimento sobrenatural.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="temporadas">
+                    <h2>📅 Resumo das temporadas</h2>
+                    <p>As primeiras temporadas focam na caçada ao demônio <strong>Amarelo</strong> que matou a mãe dos Winchesters. A trama evolui para a <strong>Apocalipse</strong>, <strong>Leviatãs</strong>, <strong>Escuridão</strong> (Deus e sua irmã Amara) e finalmente o encerramento com <strong>Deus (Chuck)</strong> como antagonista final.</p>
+                    <p>Entre os arcos mais aclamados: a libertação de Lúcifer, o purgatório, os Men of Letters e a luta pelo livre arbítrio.</p>
+                </section>
+
+                <section id="curiosidades">
+                    <h2>✨ Curiosidades e acessibilidade na série</h2>
+                    <ul>
+                        <li>A série possui episódio totalmente em preto e branco (<em>No Exit</em> - 2x06) como homenagem ao cinema clássico.</li>
+                        <li>O Impala 1967 é considerado um personagem à parte, presente em quase todos os episódios.</li>
+                        <li>O episódio "Fan Fiction" (10x05) é um musical que celebra os fãs e a comunidade.</li>
+                        <li>A série gerou diversas comunidades inclusivas, com legendas descritivas e áudio descrição em várias plataformas.</li>
+                    </ul>
+                </section>
+            </article>
+
+            <aside aria-label="Informações rápidas">
+                <h3>📊 Ficha técnica</h3>
+                <ul>
+                    <li><strong>Criador:</strong> Eric Kripke</li>
+                    <li><strong>Elenco principal:</strong> Jared Padalecki, Jensen Ackles, Misha Collins, Jim Beaver</li>
+                    <li><strong>Emissora original:</strong> The WB (2005-2006), The CW (2006-2020)</li>
+                    <li><strong>Temporadas:</strong> 15</li>
+                    <li><strong>Episódios:</strong> 327</li>
+                    <li><strong>Gênero:</strong> Sobrenatural, drama, horror, ação</li>
+                </ul>
+                <h3>🎧 Acessibilidade nesta página</h3>
+                <p>✔️ Alto contraste (clique no botão flutuante)<br>
+                ✔️ Navegação por teclado (Tab / Enter)<br>
+                ✔️ Textos com tamanho ajustável<br>
+                ✔️ Imagens com texto alternativo<br>
+                ✔️ Estrutura semântica para leitores de tela</p>
+            </aside>
+        </main>
+
+        <footer role="contentinfo">
+            <p>Conteúdo baseado na <a href="https://pt.wikipedia.org/wiki/Supernatural" target="_blank" rel="noopener">Wikipédia - Supernatural</a>. Página criada para fins educacionais - Desafio DIO | Acessibilidade e HTML5 semântico.</p>
+        </footer>
     </div>
 
-    <div class="bar"></div>
-
-    <div class="content">
-        <div class="sidebar">
-            <h2>Título</h2>
-            <ul>
-                <li><a href="#">Links</a></li>
-            </ul>
-        </div>
-
-        <div class="main">
-            
-        </div>
-
-        <div class="anchors">
-            <h2>Neste Artigo</h2>
-            <ul>
-                <li><a href="#">Âncoras</a></li>
-            </ul>
-        </div>
+    <div class="accessibility-toolbar">
+        <button class="btn-contrast" id="contrastBtn" aria-label="Ativar/desativar alto contraste">🌓 Alto Contraste</button>
     </div>
 
-    <div class="footer">
+    <script>
+        const contrastBtn = document.getElementById('contrastBtn');
+        contrastBtn.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+            // Armazena preferência no localStorage
+            if (document.body.classList.contains('high-contrast')) {
+                localStorage.setItem('highContrast', 'enabled');
+                contrastBtn.setAttribute('aria-pressed', 'true');
+            } else {
+                localStorage.setItem('highContrast', 'disabled');
+                contrastBtn.setAttribute('aria-pressed', 'false');
+            }
+        });
 
-    </div>
+        // Carrega preferência salva
+        if (localStorage.getItem('highContrast') === 'enabled') {
+            document.body.classList.add('high-contrast');
+            contrastBtn.setAttribute('aria-pressed', 'true');
+        }
+    </script>
 </body>
 </html>
